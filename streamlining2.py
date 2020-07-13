@@ -344,7 +344,7 @@ pool = Pool(ncpu)
 sampler = emcee.EnsembleSampler(nwalkers, ndim, log_ll, pool = pool)
 # emcee.EnsembleSampler is the main interface offered by emcee
 # basically we get the logarithmic probability, then define the nwalkers and 
-# ndim, then we employ this sample from our probability distribution
+# ndim, then we use this to sample from our probability distribution
 
 def cummlative_rate(flux,a,b):
     # returns the cummulative rate of events
@@ -353,7 +353,7 @@ def cummlative_rate(flux,a,b):
 max_n = 100000
 # the algorithim needs  a certain number of steps before it can forget where
 # it started, so this max is to make sure the algorithm has enough space, but
-# makes sure it doesn't go on for forever is stuff goes wrong
+# makes sure it doesn't go on for forever if stuff goes wrong
 
 # We'll track how the average autocorrelation time estimate changes
 index = 0
@@ -383,14 +383,21 @@ for sample in sampler.sample(p0, iterations=max_n, progress=True):
     old_tau = tau
 
 pool.close()
-# this
+# this function samples until it converges at a estimate of rate for the events
+# the estimate may or may not be trustworthy
 
 
 tau = sampler.get_autocorr_time()
+# this computes an estimate of the autocorrelation time for each parameter
 burnin = int(2*np.max(tau))
+# these are steps that should be discarded
 thin = int(0.5*np.min(tau))
 samples = sampler.get_chain(discard=burnin, flat=True, thin=thin)
+# gets the stored chain of MCMC samples
+# flatten the chain across ensemble, take only thin steps, discard burn-in
 log_prob_samples = sampler.get_log_prob(discard=burnin, flat=True, thin=thin)
+# gets the chain of log probabilities evaluated at the MCMC samples
+# discard burn-in steps, flatten chain across ensemble, take only thin steps
 
 print("burn-in: {0}".format(burnin))
 print("thin: {0}".format(thin))
@@ -399,24 +406,31 @@ print("flat log prob shape: {0}".format(log_prob_samples.shape))
 
 
 all_samples = samples
+# an array of the stored chain of MCMC samples
 all_samples[:,0]=np.log10((24 * 41253)*(10**all_samples[:,0])/(all_samples[:,1]-1))
+# not sure
 all_samples[:,1]-=1
+# not sure
 
 labels = [r"$\log \mathcal{R}$",r"$\alpha$"]
 
 np.savez('all_samples_may_12_snr_12',all_samples)
 all_samples
+# this saves the array
 
 all_samples = np.load('all_samples_may_12_snr_12.npz')['arr_0']
+# this loads the saved array
 
 quantile_val = 0.99
 
 import corner
 
 all_samples[:,0] = (10**all_samples[:,0]).astype(np.int)
+# not sure
 
 plt.figure(figsize=(15,15))
 corner.corner(all_samples, labels=labels, quantiles=[(1-0.99)/2,0.5,1-(1-0.99)/2],show_titles=True, bins=50)
+# makes a corner plot displaying the projections of out prob. distr. in space
 plt.savefig('rates_mc.png')
 plt.close('rates_mc.png')
 
@@ -424,18 +438,19 @@ plt.close('rates_mc.png')
 
 fig, axes = plt.subplots(2, figsize=(10, 7), sharex=True)
 samples = sampler.flatchain
+# accesses chain flattened along the zeroth (walker) axis
 labels = ["a", "b"]
 for i in range(ndim):
     ax = axes[i]
     ax.plot(samples[:nwalkers*burnin, i], "k", alpha=0.3)
     ax.set_ylabel(labels[i])
-    #ax.yaxis.set_label_coords(-0.1, 0.5)
 
 axes[-1].set_xlabel("step number");
 
 
 fig, axes = plt.subplots(2, figsize=(10, 7), sharex=True)
 samples = sampler.flatchain
+# accesses chain flattened along the zeroth (walker) axis
 labels = ["a", "b", ]
 for i in range(ndim):
     ax = axes[i]
@@ -464,8 +479,6 @@ plt.xscale('log')
 plt.yscale('log')
 
 num_plots=len(surveys)
-#colormap = plt.cm.gist_ncar
-#plt.gca().set_color_cycle([colormap(i) for i in np.linspace(0, 0.9, num_plots)])
 my_colors = plt.rcParams['axes.prop_cycle']() 
 
 plt.errorbar(26, 37, yerr=8,fmt='.')
@@ -495,6 +508,8 @@ total_label.append("Lorimer 2007")
 plt.errorbar(1, 5e3 ,fmt='.')
 total_label.append("Masui 2015")
 
+# insert a way to put the user data in the plot
+
 plt.grid()
 plt.legend(total_label, ncol=5, loc='lower center', 
            bbox_to_anchor=[0.5, 1.1], 
@@ -509,28 +524,48 @@ plt.savefig("rates.png", bbox_inches='tight')
 plt.close('rates.png')
 
 
+# cumm_rate(flux, a, b)
+# flux = 1
 
 cummlative_rate(1,10**np.quantile(all_samples,0.5,axis=0)[0],np.quantile(all_samples,0.5,axis=0)[1])
+# a = 10**np.quantile(all_samples,0.5,axis=0)[0]
+# b = np.quantile(all_samples,0.5,axis=0)[1]
 
 cummlative_rate(1,10**np.quantile(all_samples,quantile_val,axis=0)[0],np.quantile(all_samples,quantile_val,axis=0)[1])
+# a = 10**np.quantile(all_samples,quantile_val,axis=0)[0]
+# b = np.quantile(all_samples,quantile_val,axis=0)[1]
 
 cummlative_rate(1,10**np.quantile(all_samples,1-quantile_val,axis=0)[0],np.quantile(all_samples,1-quantile_val,axis=0)[1])
+# a = 10**np.quantile(all_samples,1-quantile_val,axis=0)[0]
+# b = np.quantile(all_samples,1-quantile_val,axis=0)[1]
 
 cummlative_rate(1,10**np.quantile(all_samples,0.5,axis=0)[0],np.quantile(all_samples,0.5,axis=0)[1])-cummlative_rate(1,10**np.quantile(all_samples,quantile_val,axis=0)[0],np.quantile(all_samples,quantile_val,axis=0)[1])
+# a = 10**np.quantile(all_samples,0.5,axis=0)[0]
+# b = np.quantile(all_samples,0.5,axis=0)[1])-cummlative_rate(1,10**np.quantile(all_samples,quantile_val,axis=0)[0],np.quantile(all_samples,quantile_val,axis=0)[1]
 
 cummlative_rate(1,10**np.quantile(all_samples,1-quantile_val,axis=0)[0],np.quantile(all_samples,1-quantile_val,axis=0)[1])-cummlative_rate(1,10**np.quantile(all_samples,0.5,axis=0)[0],np.quantile(all_samples,0.5,axis=0)[1])
+# a = 10**np.quantile(all_samples,1-quantile_val,axis=0)[0]
+# b = np.quantile(all_samples,1-quantile_val,axis=0)[1])-cummlative_rate(1,10**np.quantile(all_samples,0.5,axis=0)[0],np.quantile(all_samples,0.5,axis=0)[1]
 
 cummlative_rate(1,10**np.quantile(all_samples,0.5,axis=0)[0],np.quantile(all_samples,0.5,axis=0)[1])
+# a = 10**np.quantile(all_samples,0.5,axis=0)[0]
+# b = np.quantile(all_samples,0.5,axis=0)[1]
 
 np.quantile(samples[nwalkers*burnin:, 1], 0.5)
+# computes the 0.5-th quantile of the data
 
 np.quantile(samples[nwalkers*burnin:, 1], 0.5) - np.quantile(samples[nwalkers*burnin:, 1], quantile_val)
+# subtracts ^ from the (quantile_val)-th quantile of the data
 
 -np.quantile(samples[nwalkers*burnin:, 1], 0.5) + np.quantile(samples[nwalkers*burnin:, 1], 1-quantile_val)
+# subtracts ^^ from the (1-quantile_val)-th quantile value of the data
+# why is this negative?
 
 np.quantile(samples[nwalkers*burnin:, 1], quantile_val) - np.quantile(samples[nwalkers*burnin:, 1], 0.5)
+# subtracts (quantile_val)-th quantile of the data from ^^^
 
 get_ipython().system('pip install chainconsumer --upgrade')
+# installs the most current package for last plot
 
 from chainconsumer import ChainConsumer
 from matplotlib import rc # this is the matplotlib suggestion
