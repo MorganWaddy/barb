@@ -527,6 +527,7 @@ plt.close('rates.png')
 
 # cumm_rate(flux, a, b)
 # flux = 1
+# this section is where Devansh manually computes the quantiles to check if chainconsumer is working properly
 
 cummlative_rate(1,10**np.quantile(all_samples,0.5,axis=0)[0],np.quantile(all_samples,0.5,axis=0)[1])
 # a = 10**np.quantile(all_samples,0.5,axis=0)[0]
