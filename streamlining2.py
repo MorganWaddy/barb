@@ -425,8 +425,9 @@ quantile_val = 0.99
 
 import corner
 
-all_samples[:,0] = (10**all_samples[:,0]).astype(np.int)
-# not sure
+# all_samples[:,0] = (all_samples[:,0]).astype(np.int)
+# all_samples[:,0] = (10**all_samples[:,0]).astype(np.int)
+# removing this statement completely fixed the problem where the program plotted R instead of log(R)
 
 plt.figure(figsize=(15,15))
 corner.corner(all_samples, labels=labels, quantiles=[(1-0.99)/2,0.5,1-(1-0.99)/2],show_titles=True, bins=50)
