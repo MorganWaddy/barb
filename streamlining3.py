@@ -1,4 +1,4 @@
-# this is the second take at streamlining the code
+# this is the third take at streamlining the code
 import numpy as np
 import pylab as plt
 import matplotlib
@@ -9,223 +9,78 @@ import emcee
 import sys
 import json
 
+# sample command:
+# ipython streamlining3.py surveys/*.json
 
-# this is feeding in all the previous data
-surveys = ['Lorimer 2007', 'Deneva 2009', 'Keane 2010', 'Siemion 2011', 'Burgay 2012', 
-             'Petroff 2014', 'Spitler 2014', 'Burke-Spolaor 2014',
-             'Ravi 2015', 'Petroff 2015', 'Law 2015', 'Champion 2016']
+# renaming variables
+# n = nFRBs
+# S = FWHM_2
 
-n = np.array([1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 10])
-# Sensitivity at FWHM divided by 2
-S =np.array([0.590, 0.365, 0.447, 118, 0.529, 0.868, 0.210, 0.615, 0.555, 0.555, 0.240, 0.560]) / 2
-# FWHM diameter in arcminutes divided by 2 to get radius divide by 60 to get degrees
-R = np.array([14, 4, 14, 150, 14, 14, 4, 14, 14, 14, 60, 14])/(2*60)
-# Number of beams.
-beams =np.array([13, 7, 13, 30, 13, 13, 7, 13, 13, 13, 1, 13])
-# Time per beam
-tpb =np.array([490.5, 459.1, 1557.5, 135.8, 532.6, 926, 11503.3, 917.3, 68.4, 85.5, 166, 2786.5])
-
-# observed flux
-flux = [[30], # Lorimer 2007
-        [None],
-        [None],
-        [None],
-        [None],
-        [None],
-          [0.4], 	# Spitler 2014
-          [0.3],	# Burke-Spolaor 2014
-          [2.1],	# Ravi et al. (estimated from Figure 3, 1432 MHz)
-          [0.47], # Petroff 2015
-        [None],
-          [1.3, 0.4, 0.5, 0.5, # Chamption 2016 (these values are actually from Thornton 2013)
-          0.87, 0.42, 0.69, 1.67, 0.18, # Champion 2016 (estimated from Figure 1)
-          2.2]]  # The last Champion entry that Scott found somewhere (FRB Cat?)
-
-# Zhang et al. 2019: A new fast radio burst in the datasets containing the Lorimer burst
-n[0] = 3
-flux[0].append(0.25)
-# Zhang et al 2020: Parkes transient events: I. Database of single pulses, initial results and missing FRBs
-flux[0].append(0.42)
-tpb[0] += 250
-
-# Petroff et al. 2018: A fast radio burst with a low dispersion measure
-n[-1] = 11
-flux[-1].append(27)
-
-# Shannon et al. 2018 20 ASKAP FRBs
-surveys.append("Shannon 2018")
-n=np.append(n,20)
-S=np.append(S,24.6)
-R=np.append(R, 54/2/60)
-beams = np.append(beams, 36)
-tpb = np.append(tpb, 1700)
-flux.append([58/2.4, 97/5.0, 34/4.4, 52/3.5, 74/2.5, 81/2.0, 219/5.4, 200/1.7, 63/2.3, 133/1.5, 40/1.9, 420/3.2,
-        110/2.7, 51/2.9, 66/2.3, 95/4.1, 100/4.5, 96/1.81])
-
-# Bhandari et al. 2019 ASKAP FRB
-surveys.append("Bhandari 2019")
-n=np.append(n,1)
-S=np.append(S,24.6)
-R=np.append(R, 54/2/60)
-beams = np.append(beams, 36)
-tpb = np.append(tpb, 1286)
-flux.append([46/1.9])
-
-# Qiu et al. 2019 ASKAP FRB
-surveys.append("Qiu 2019")
-n=np.append(n,1)
-S=np.append(S,24.6)
-R=np.append(R, 54/2/60)
-beams = np.append(beams, 36)
-tpb = np.append(tpb, 963.89)
-flux.append([177])
-
-# Agarwal et al. 2019 ASKAP FRB
-surveys.append("Agarwal 2019")
-n=np.append(n,1)
-S=np.append(S,24.6/np.sqrt(7))
-R=np.append(R, 54/2/60)
-beams = np.append(beams, 36)
-tpb = np.append(tpb, 300)
-flux.append([22])
-
-# Bhandari et al. 2018 Superb
-surveys.append("Bhandari 2018")
-n=np.append(n,4)
-S=np.append(S,0.560/2)
-R=np.append(R, 14/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 2722)
-flux.append([0.7, 0.3, 0.43, 0.5])
-
-# Oslowski et al. 2019 PPTA
-surveys.append("Oslowski 2019")
-n=np.append(n,4)
-S=np.append(S,0.560/2)
-R=np.append(R, 14/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 659.5)
-flux.append([1.2,23.5, 0.15, 0.6])
-
-# Masui et al 2015 GBT
-surveys.append("Masui 2015")
-n=np.append(n,1)
-S=np.append(S,0.27)
-R=np.append(R, 15/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 400)
-flux.append([0.6])
-
-# Non detections
-
-# Men et al. 2019
-surveys.append("Men (Arecibo) 2019")
-n=np.append(n,0)
-S=np.append(S,0.021)
-R=np.append(R, 3.5/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, (340.7+448.8)/60)
-flux.append([None])
-
-surveys.append("Men (GBT) 2019")
-n=np.append(n,0)
-S=np.append(S,0.087)
-R=np.append(R, 9/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, (70.6 + 82.5 + 131.3 + 76.5)/60)
-flux.append([None])
-
-# Madison et al. 2019
-surveys.append("Madison (Arecibo) 2019")
-n=np.append(n,0)
-S=np.append(S,0.021)
-R=np.append(R, 3.5/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 20)
-flux.append([None])
-
-surveys.append("Madison (GBT) 2019")
-n=np.append(n,0)
-S=np.append(S,0.087)
-R=np.append(R, 9/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 60)
-flux.append([None])
-
-# GBTrans
-surveys.append("Golpayegani 2019")
-n=np.append(n,0)
-S=np.append(S,6*1.26)
-R=np.append(R, 48/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 503*24)
-flux.append([None])
-
+# putting all the data into the json files
+# Files in the original dataset include:
+# Agarwal 2019
+# Masui 2015
+# Men 2019
+# Bhandari 2018
+# Golpayegani 2019
+# Oslowski 2019
 # GREENBURST
+# Bhandari 2019
+# Qiu 2019
+# Shannon 2018
+# Madison 2019
+# Lorimer 2007
+# Deneva 2009
+# Keane 2010
+# Siemion 2011
+# Burgay 2012
+# Petroff 2014
+# Spitler 2014
+# Burke-Spolaor 2014
+# Ravi 2015
+# Petroff 2015
+# Law 2015
+# Champion 2016
 
-surveys.append("This work (L-band)")
-n=np.append(n,0)
-S=np.append(S,0.14*1.2)
-R=np.append(R, 9/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 2194)
-flux.append([None])
+# placeholder for where I write a program to read in all data
 
-surveys.append("This work (X-band)")
-n=np.append(n,0)
-S=np.append(S,0.89*1.2)
-R=np.append(R, 9/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 615)
-flux.append([None])
+surveys = []
+# Number of FRBs discovered in the survey
+nFRBs = []
+# Sensitivity at FWHM divided by 2
+FWHM_2 = []
+# FWHM diameter in arcminutes divided by 2 to get radius divide by 60 to get degrees
+R = []
+# Number of beams
+beams = []
+# Time per beam
+tpb = []
+flux = []
 
-surveys.append("This work (C-band)")
-n=np.append(n,0)
-S=np.append(S,0.25*1.2)
-R=np.append(R, 9/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 556)
-flux.append([None])
-
-surveys.append("This work (Ku-band)")
-n=np.append(n,0)
-S=np.append(S,0.8*1.2)
-R=np.append(R, 9/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 210)
-flux.append([None])
-
-surveys.append("This work (Mustang)")
-n=np.append(n,0)
-S=np.append(S,0.26*1.2)
-R=np.append(R, 9/2/60)
-beams = np.append(beams, 1)
-tpb = np.append(tpb, 181)
-flux.append([None])
-
-# this is for the user to feed in their own data
+# this is to feed in the data
 j = len(sys.argv[1:])
 k = j+1
 filename = sys.argv[1:k]
-print("Sanity Check:")
-print("The number of user file(s) supplied is", j)
-print("The name of the user file(s) supplied is/are", filename)
 
-# print("\nThe User Data Supplied:")
 # this can take multiple datasets in the same file, or multiple files
 if j > 0:
+    print("Sanity Check:")
+    print("The number of user file(s) supplied is", j)
+    print("The name of the user file(s) supplied is/are", filename)
     for e in sys.argv[1:]:
         with open(e, "r") as fobj:
             info = json.load(fobj)
             for p in info['properties']:
                 surveys.append(p['surveys'])
-                n = np.append(n,p['n'])
-                S = np.append(S,p['S'])
+                nFRBs = np.append(nFRBs,p['nFRBs'])
+                FWHM_2 = np.append(FWHM_2,p['FWHM_2'])
                 R = np.append(R,p['R'])
                 beams = np.append(beams,p['beams'])
                 tpb = np.append(tpb,p['tpb'])
                 flux.append(p['flux'])
         fobj.close()
+    else:
+        print("No data was supplied, please supply data on the command line!")
 # the usual way the R value is written it cannot be parsed by JSON
 # make sure you do the ?/2/60 calculation b4 inputting the data
 
@@ -255,7 +110,7 @@ def likelihood_list(data, alpha, beta):
     # an FRB
     # from appendix A:
     # alpha = ab
-    n, radius, time, sensitivity, flux = data
+    nFRBs, radius, time, sensitivity, flux = data
     A = area(radius, beta-1)
     I = power_integral(sensitivity, beta)
     taa = time*A*alpha
@@ -270,10 +125,10 @@ def likelihood_list(data, alpha, beta):
     return ll
 
 global data
-data = n, R, time, S, flux
+data = nFRBs, R, time, FWHM_2, flux
 
 # defining a file to put the data arrays
-with open('input_array.txt', 'w') as dat:
+with open('input_array-modified.txt', 'w') as dat:
     dat.write(str(data)+"\n")
     dat.close()
 
@@ -289,7 +144,7 @@ log_ll([0.97504624, 1.91163861])
 # log_ll([alpha,beta])
 # this is supplying the alpha and beta for the calculations
 # defining a file that houses the results of the functions
-with open('calculations.out', 'a') as calc:
+with open('calculations-modified.out', 'a') as calc:
     logly = log_ll([0.97504624, 1.91163861])
     calc.write("log_ll([0.97504624, 1.91163861]) = "+str(logly)+"\n\n")
     calc.close()
@@ -307,8 +162,8 @@ bb[np.argmin(lk)]
 plt.plot(bb-1,-1*np.array(lk))
 plt.yscale('log')
 # saving this to view later
-plt.savefig('log_check.png')
-plt.close('log_check.png')
+plt.savefig('log_check-modified.png')
+plt.close('log_check-modified.png')
 # these plots will help us see if the functions are working 
 
 
@@ -317,7 +172,7 @@ ndim, nwalkers = 2, 1200
 ivar = np.array([np.log10(15),2.5])
 print("ivar is ", ivar)
 # ivar is an intermediate variable
-with open('calculations.out', 'a') as calc:
+with open('calculations-modified.out', 'a') as calc:
     calc.writelines("ivar is "+ str(ivar)+"\n\n")
     calc.close()
 
@@ -326,11 +181,11 @@ p0 = ivar + 0.05* np.random.uniform(size=(nwalkers, ndim))
 # this returns a uniform random distribution mimicking the distribution of 
 # the data
 plt.hist(p0[:,0])
-plt.savefig('MCMC_hist1.png')
-plt.close('MCMC_hist1.png')
+plt.savefig('MCMC_hist1-modified.png')
+plt.close('MCMC_hist1-modified.png')
 plt.hist(p0[:,1])
-plt.savefig('MCMC_hist2.png')
-plt.close('MCMC_hist2.png')
+plt.savefig('MCMC_hist2-modified.png')
+plt.close('MCMC_hist2-modified.png')
 # these plots visualize that distribution
 
 from multiprocessing import cpu_count
@@ -426,13 +281,11 @@ quantile_val = 0.99
 
 import corner
 
-all_samples[:,0] = (10**all_samples[:,0]).astype(np.int)
-
 plt.figure(figsize=(15,15))
 corner.corner(all_samples, labels=labels, quantiles=[(1-0.99)/2,0.5,1-(1-0.99)/2],show_titles=True, bins=50)
 # makes a corner plot displaying the projections of out prob. distr. in space
-plt.savefig('rates_mc.png')
-plt.close('rates_mc.png')
+plt.savefig('rates_mc-modified.png')
+plt.close('rates_mc-modified.png')
 
 
 
@@ -520,8 +373,26 @@ plt.legend(total_label, ncol=5, loc='lower center',
 plt.plot(flux,cummlative_rate(flux,10**np.quantile(all_samples,1-quantile_val,axis=0)[0]
                                         ,np.quantile(all_samples,1-quantile_val,axis=0)[1]),'k--')
 
-plt.savefig("rates.png", bbox_inches='tight')
-plt.close('rates.png')
+plt.savefig("rates-modified.png", bbox_inches='tight')
+plt.close('rates-modified.png')
+
+get_ipython().system('pip install chainconsumer --upgrade')
+# installs the most current package for last plot
+# need to use ipython to run script due to this command
+
+from chainconsumer import ChainConsumer
+from matplotlib import rc # this is the matplotlib suggestion
+rc('text', usetex=False)
+
+c = ChainConsumer()
+labels = [r"$\log \mathcal{R}$",r"$\alpha$"]#list(map(r"$\theta_{{{0}}}$".format, range(1, ndim+1)))
+c.add_chain(all_samples, parameters=labels)
+#c.plotter.plot(filename="example.png", figsize="column")
+c.configure(flip=False, sigma2d=False, sigmas=[1, 2])  # The default case, so you don't need to specify sigma2d
+fig = c.plotter.plot()
+plt.savefig('rates_mc_cc.png')
+plt.close('rates_mc_cc.png')
+# in regards to the kpsewhich problem -- you have to be running the texlive2016 module in your bashrc for this program to work
 
 import os
 os.sys.path.append("/usr/bin/")
