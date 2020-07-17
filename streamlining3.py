@@ -68,6 +68,7 @@ if j > 0:
     print("The number of user file(s) supplied is", j)
     print("The name of the user file(s) supplied is/are", filename)
     for e in sys.argv[1:]:
+        print("reading file ",e)
         with open(e, "r") as fobj:
             info = json.load(fobj)
             for p in info['properties']:
@@ -79,10 +80,11 @@ if j > 0:
                 tpb = np.append(tpb,p['tpb'])
                 flux.append(p['flux'])
         fobj.close()
-    else:
-        print("No data was supplied, please supply data on the command line!")
+else:
+    print("No data was supplied, please supply data on the command line!")
 # the usual way the R value is written it cannot be parsed by JSON
 # make sure you do the ?/2/60 calculation b4 inputting the data
+# changed all the nondetections with flux as None to 'flux': [-1]
 
 
 time = tpb*beams
@@ -115,9 +117,9 @@ def likelihood_list(data, alpha, beta):
     I = power_integral(sensitivity, beta)
     taa = time*A*alpha
     ll = 0
-    for idx, nburst in enumerate(n):
+    for idx, nburst in enumerate(nFRBs):
         # idx is just a number that identifies a place in the array
-        if flux[idx] == [None]:
+        if flux[idx] == [-1]:
             val=-taa[idx]*I[idx]
         else:
             val=-taa[idx]*I[idx] + nburst*np.log(taa[idx]) -beta*np.sum(np.log(flux[idx]))
