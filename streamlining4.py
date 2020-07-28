@@ -1,0 +1,387 @@
+# this is the fourth take at streamlining the code
+# logging -> check
+# feed-in argparse -> check
+# functions to file -> 1/5
+# new names to plot -> 1/2
+import numpy as np
+import pylab as plt
+import matplotlib
+matplotlib.use('Agg')
+import math
+from tqdm import tqdm
+import emcee
+import sys
+import json
+import logging
+import argparse
+
+# sample command:
+# python streamlining4.py -D surveys/*.json
+
+# putting all the data into the json files
+# Files in the original dataset include:
+# Agarwal 2019
+# Masui 2015
+# Men 2019
+# Bhandari 2018
+# Golpayegani 2019
+# Oslowski 2019
+# GREENBURST
+# Bhandari 2019
+# Qiu 2019
+# Shannon 2018
+# Madison 2019
+# Lorimer 2007
+# Deneva 2009
+# Keane 2010
+# Siemion 2011
+# Burgay 2012
+# Petroff 2014
+# Spitler 2014
+# Burke-Spolaor 2014
+# Ravi 2015
+# Petroff 2015
+# Law 2015
+# Champion 2016
+
+logging.basicConfig(filename='FRB-rate-calc.log',level=logging.INFO)
+
+surveys = []
+# Number of FRBs discovered in the survey
+nFRBs = []
+# Sensitivity at FWHM divided by 2
+FWHM_2 = []
+# FWHM diameter in arcminutes divided by 2 to get radius divide by 60 to get degrees
+R = []
+# Number of beams
+beams = []
+# Time per beam
+tpb = []
+flux = []
+
+# feed in scheme
+parser = argparse.ArgumentParser(description="Calculates an all-sky rate of FRBs.",formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument('-D', '--dat', help='supply the input data after this flag', action='store', nargs='+', required=True)
+args = parser.parse_args()
+
+j = len(args.dat)
+k = j+1
+filename = args.dat
+
+# this can take multiple datasets in the same file, or multiple files
+if j > 0:
+    logging.info("Sanity Check:")
+    logging.info("The number of user file(s) supplied is {0}".format(j)+"\n")
+    logging.info("The supplied file(s) is/are {0}".format(filename)+"\n")
+    for e in args.dat:
+        with open(e, "r") as fobj:
+            info = json.load(fobj)
+            for p in info['properties']:
+                surveys.append(p['surveys'])
+                nFRBs = np.append(nFRBs,p['nFRBs'])
+                FWHM_2 = np.append(FWHM_2,p['FWHM_2'])
+                R = np.append(R,p['R'])
+                beams = np.append(beams,p['beams'])
+                tpb = np.append(tpb,p['tpb'])
+                flux.append(p['flux'])
+        fobj.close()
+else:
+    print("No data was supplied, please supply data on the command line!")
+# the usual way the R value is written it cannot be parsed by JSON
+# make sure you do the ?/2/60 calculation b4 inputting the data
+# changed all the nondetections with flux as None to 'flux': [-1]
+
+# this converts the arrays to numpy arrays b/c previously some of the values were read as python lists
+nFRBs = np.array(nFRBs)
+FWHM_2 = np.array(FWHM_2)
+R = np.array(R)
+beams = np.array(beams)
+tpb = np.array(tpb)
+
+time = tpb*beams
+
+
+# this term is from the paper (Lawrence. et. al) - this function finds the effective area of the reciever
+def area(radius, b):
+    # b is Euclidean scaling that is valid for any population with a fixed 
+    # luminosity distribution, as long as the luminosity does not evolve with 
+    # redshift and the population has a uniform spatial distribution
+    ar=np.pi*radius*radius/(b*np.log(2))
+    return ar
+
+# power rule for integrals
+# returns the value for the integral of [sensitivity^(beta)]d(sensitivity)
+def power_integral(sensitivity, beta):
+    # references the cumm. rate for observed fluxes > 0 (from paper)
+    return (sensitivity**-(beta-1)) / (beta-1)
+    # sensitivity is sigma, measured in janskys
+    # from appendix A:
+    # beta = b + 1
+
+def likelihood_list(data, alpha, beta):
+    # runs through all data to return the likelihood that there will be
+    # an FRB
+    # from appendix A:
+    # alpha = ab
+    nFRBs, radius, time, sensitivity, flux = data
+    A = area(radius, beta-1)
+    I = power_integral(sensitivity, beta)
+    taa = time*A*alpha
+    ll = 0
+    for idx, nburst in enumerate(nFRBs):
+        # idx is just a number that identifies a place in the array
+        if flux[idx] == [-1]:
+            val=-taa[idx]*I[idx]
+        else:
+            val=-taa[idx]*I[idx] + nburst*np.log(taa[idx]) -beta*np.sum(np.log(flux[idx]))
+        ll+=val
+    return ll
+
+global data
+data = nFRBs, R, time, FWHM_2, flux
+logging.info(str(data)+"\n")
+
+def log_ll(junk):
+    alpha, beta = junk
+    alpha = 10**alpha
+    if (beta < 1):
+        return -np.inf
+    return likelihood_list(data, alpha=alpha, beta=beta)
+
+# returns results of logarithmic likelihood function
+log_ll([0.97504624, 1.91163861])
+# log_ll([alpha,beta])
+# this is supplying the alpha and beta for the calculations
+
+logly = log_ll([0.97504624, 1.91163861])
+logging.info("log_ll([0.97504624, 1.91163861]) = "+str(logly)+"\n\n")
+
+bb = np.linspace(0.1,3,100)
+# bb supplies 100 evenly spaced numbers over the interval
+lk = [log_ll([np.log10(586.88/(24 * 41253)), b]) for b in bb]
+# lk performs the log_ll calculation on the bb array
+
+# returns the indices of the minimum values of bb
+bb[np.argmin(lk)]
+
+# this plots on a log scale the array of values from lk multiplied by -1 vs the bb array - 1
+# in the mcmc you maximize the likelihood, this is to check if the functions are working
+plt.plot(bb-1,-1*np.array(lk))
+plt.yscale('log')
+# saving this to view later
+plt.savefig('log_check-modified.png')
+plt.close('log_check-modified.png')
+# these plots will help us see if the functions are working 
+
+
+ndim, nwalkers = 2, 1200
+# walkers are copies of a system evolving towards a minimum
+ivar = np.array([np.log10(15),2.5])
+logging.info("ivar is "+ str(ivar)+"\n\n")
+# ivar is an intermediate variable
+
+
+p0 = ivar + 0.05* np.random.uniform(size=(nwalkers, ndim))
+# this returns a uniform random distribution mimicking the distribution of 
+# the data
+plt.hist(p0[:,0])
+plt.savefig('MCMC_hist1-modified.png')
+plt.close('MCMC_hist1-modified.png')
+plt.hist(p0[:,1])
+plt.savefig('MCMC_hist2-modified.png')
+plt.close('MCMC_hist2-modified.png')
+# these plots visualize that distribution
+
+from multiprocessing import cpu_count
+ncpu = cpu_count() - 5#//2
+logging.info("{0} CPUs".format(ncpu))
+from multiprocessing import Pool
+# getting ready to run the heavy-duty jobs so this counts the cpus
+
+pool = Pool(ncpu)
+# pool paralelizes the execution of the functions over the cpus
+sampler = emcee.EnsembleSampler(nwalkers, ndim, log_ll, pool = pool)
+# emcee.EnsembleSampler is the main interface offered by emcee
+# basically we get the logarithmic probability, then define the nwalkers and 
+# ndim, then we use this to sample from our probability distribution
+
+from cumm_rate import cummlative_rate
+
+max_n = 100000
+# the algorithim needs  a certain number of steps before it can forget where
+# it started, so this max is to make sure the algorithm has enough space, but
+# makes sure it doesn't go on for forever if stuff goes wrong
+
+# We'll track how the average autocorrelation time estimate changes
+index = 0
+autocorr = np.empty(max_n)
+
+# This will be useful to testing convergence
+old_tau = np.inf
+
+# Now we'll sample for up to max_n steps
+for sample in sampler.sample(p0, iterations=max_n, progress=True):
+    # Only check convergence every 100 steps
+    if sampler.iteration % 100:
+        continue
+
+    # Compute the autocorrelation time so far
+    # Using tol=0 means that we'll always get an estimate even
+    # if it isn't trustworthy
+    tau = sampler.get_autocorr_time(tol=0)
+    autocorr[index] = np.mean(tau)
+    index += 1
+
+    # Check convergence
+    converged = np.all(tau * 100 < sampler.iteration)
+    converged &= np.all(np.abs(old_tau - tau) / tau < 0.01)
+    if converged:
+        break
+    old_tau = tau
+
+pool.close()
+# this function samples until it converges at a estimate of rate for the events
+# the estimate may or may not be trustworthy
+
+
+tau = sampler.get_autocorr_time()
+# this computes an estimate of the autocorrelation time for each parameter
+burnin = int(2*np.max(tau))
+# these are steps that should be discarded
+thin = int(0.5*np.min(tau))
+samples = sampler.get_chain(discard=burnin, flat=True, thin=thin)
+# gets the stored chain of MCMC samples
+# flatten the chain across ensemble, take only thin steps, discard burn-in
+log_prob_samples = sampler.get_log_prob(discard=burnin, flat=True, thin=thin)
+# gets the chain of log probabilities evaluated at the MCMC samples
+# discard burn-in steps, flatten chain across ensemble, take only thin steps
+
+logging.info("burn-in: {0}".format(burnin))
+logging.info("thin: {0}".format(thin))
+logging.info("flat chain shape: {0}".format(samples.shape))
+logging.info("flat log prob shape: {0}".format(log_prob_samples.shape))
+
+
+all_samples = samples
+# an array of the stored chain of MCMC samples
+all_samples[:,0]=np.log10((24 * 41253)*(10**all_samples[:,0])/(all_samples[:,1]-1))
+# 0 corresponds to R
+all_samples[:,1]-=1
+# 1 corresponds to alpha
+# converting to the right units
+
+labels = [r"$\log \mathcal{R}$",r"$\alpha$"]
+
+np.savez('all_samples_may_12_snr_12',all_samples)
+all_samples
+# this saves the array
+
+all_samples = np.load('all_samples_may_12_snr_12.npz')['arr_0']
+# this loads the saved array
+
+quantile_val = 0.99
+
+import corner
+
+plt.figure(figsize=(15,15))
+corner.corner(all_samples, labels=labels, quantiles=[(1-0.99)/2,0.5,1-(1-0.99)/2],show_titles=True, bins=50)
+# makes a corner plot displaying the projections of out prob. distr. in space
+plt.savefig('rates_mc-modified.png')
+plt.close('rates_mc-modified.png')
+
+
+
+fig, axes = plt.subplots(2, figsize=(10, 7), sharex=True)
+samples = sampler.flatchain
+# accesses chain flattened along the zeroth (walker) axis
+labels = ["a", "b"]
+for i in range(ndim):
+    ax = axes[i]
+    ax.plot(samples[:nwalkers*burnin, i], "k", alpha=0.3)
+    ax.set_ylabel(labels[i])
+
+axes[-1].set_xlabel("step number");
+
+
+fig, axes = plt.subplots(2, figsize=(10, 7), sharex=True)
+samples = sampler.flatchain
+# accesses chain flattened along the zeroth (walker) axis
+labels = ["a", "b", ]
+for i in range(ndim):
+    ax = axes[i]
+    ax.plot(samples[:, i], "k", alpha=0.3)
+    ax.set_xlim(0, len(all_samples))
+    ax.set_ylabel(labels[i])
+    #ax.yaxis.set_label_coords(-0.1, 0.5)
+
+axes[-1].set_xlabel("step number");
+
+
+
+quantile_val = 0.01
+flux = np.logspace(-2,2,100)
+plt.figure(figsize=(10,6))
+total_label=[]
+plt.plot(flux,cummlative_rate(flux,10**np.mean(all_samples[:,0]),np.mean(all_samples[:,1])),'k')
+total_label.append("Best fit")
+plt.plot(flux,cummlative_rate(flux,10**np.quantile(all_samples,quantile_val,axis=0)[0]
+                                        ,np.quantile(all_samples,quantile_val,axis=0)[1]),'k--')
+total_label.append(r"3$\sigma$ Error")
+
+plt.xlabel('Flux Limit (Jy)')
+plt.ylabel(r'Rate (day$^{-1} sky^{-1}$)')
+plt.xscale('log')
+plt.yscale('log')
+
+num_plots=len(surveys)
+my_colors = plt.rcParams['axes.prop_cycle']() 
+
+plt.errorbar(26, 37, yerr=8,fmt='.')
+total_label.append("Shannon 2018")
+
+plt.errorbar(0.560/2, 1700, yerr=np.array([1700-800,3200-1700]).reshape(2,1),fmt='.')
+total_label.append("Bhandari 2018")
+
+plt.errorbar(0.560/2, 10000, yerr=np.array([5000,6000]).reshape(2,1),fmt='.')
+total_label.append("Thronton 2013")
+
+plt.errorbar(1.0, 587, yerr=np.array([587-272,924-587]).reshape(2,1),fmt='.')
+total_label.append("Lawrence 2017")
+
+plt.errorbar(0.560/2, 3300, yerr=np.array([3300-1100,7000-3300]).reshape(2,1),fmt='.')
+total_label.append("Crawford 2016")
+
+plt.errorbar(0.590/2, 7000, yerr=np.array([1000,12000-7000]).reshape(2,1),fmt='.')
+total_label.append("Champion 2016")
+
+plt.errorbar(0.590/2, 4400, yerr=np.array([4400-1300,9600-4400]).reshape(2,1),fmt='.')
+total_label.append("Rane 2016")
+
+plt.errorbar(0.590/2, 225,fmt='.')
+total_label.append("Lorimer 2007")
+
+plt.errorbar(1, 5e3 ,fmt='.')
+total_label.append("Masui 2015")
+
+# insert a way to put the user data in the plot
+# user_files = args.dat
+# for z in args.dat:
+   # plt.error(FWHM_2/2, ?, yerr=np.array([]).reshape(2,1), fmt='.')
+   # total_label.append("{0}".format(surveys))
+
+plt.grid()
+plt.legend(total_label, ncol=5, loc='lower center', 
+           bbox_to_anchor=[0.5, 1.1], 
+           columnspacing=1.0, labelspacing=0.0,
+           handletextpad=0.0, handlelength=1.5,
+           fancybox=True, shadow=True)
+
+plt.plot(flux,cummlative_rate(flux,10**np.quantile(all_samples,1-quantile_val,axis=0)[0]
+                                        ,np.quantile(all_samples,1-quantile_val,axis=0)[1]),'k--')
+
+plt.savefig("rates-modified.png", bbox_inches='tight')
+plt.close('rates-modified.png')
+
+
+import os
+os.sys.path.append("/usr/bin/")
