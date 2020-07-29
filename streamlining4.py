@@ -1,8 +1,8 @@
 # this is the fourth take at streamlining the code
 # logging -> check
 # feed-in argparse -> check
-# functions to file -> 1/5
-# new names to plot -> 1/2
+# functions to file -> 4/5
+# new names to plot -> confused
 import numpy as np
 import pylab as plt
 import matplotlib
@@ -86,7 +86,7 @@ if j > 0:
                 flux.append(p['flux'])
         fobj.close()
 else:
-    print("No data was supplied, please supply data on the command line!")
+    logging.info("No data was supplied, please supply data on the command line!")
 # the usual way the R value is written it cannot be parsed by JSON
 # make sure you do the ?/2/60 calculation b4 inputting the data
 # changed all the nondetections with flux as None to 'flux': [-1]
@@ -101,48 +101,20 @@ tpb = np.array(tpb)
 time = tpb*beams
 
 
-# this term is from the paper (Lawrence. et. al) - this function finds the effective area of the reciever
-def area(radius, b):
-    # b is Euclidean scaling that is valid for any population with a fixed 
-    # luminosity distribution, as long as the luminosity does not evolve with 
-    # redshift and the population has a uniform spatial distribution
-    ar=np.pi*radius*radius/(b*np.log(2))
-    return ar
+from likelihood import area
 
-# power rule for integrals
-# returns the value for the integral of [sensitivity^(beta)]d(sensitivity)
-def power_integral(sensitivity, beta):
-    # references the cumm. rate for observed fluxes > 0 (from paper)
-    return (sensitivity**-(beta-1)) / (beta-1)
-    # sensitivity is sigma, measured in janskys
-    # from appendix A:
-    # beta = b + 1
+from likelihood import power_integral
 
-def likelihood_list(data, alpha, beta):
-    # runs through all data to return the likelihood that there will be
-    # an FRB
-    # from appendix A:
-    # alpha = ab
-    nFRBs, radius, time, sensitivity, flux = data
-    A = area(radius, beta-1)
-    I = power_integral(sensitivity, beta)
-    taa = time*A*alpha
-    ll = 0
-    for idx, nburst in enumerate(nFRBs):
-        # idx is just a number that identifies a place in the array
-        if flux[idx] == [-1]:
-            val=-taa[idx]*I[idx]
-        else:
-            val=-taa[idx]*I[idx] + nburst*np.log(taa[idx]) -beta*np.sum(np.log(flux[idx]))
-        ll+=val
-    return ll
+from likelihood import likelihood_list
 
 global data
 data = nFRBs, R, time, FWHM_2, flux
 logging.info(str(data)+"\n")
 
+# when trying to import this from a file, the variable names aren't defined
 def log_ll(junk):
     alpha, beta = junk
+    nFRBs, radius, time, sensitivity, flux = data
     alpha = 10**alpha
     if (beta < 1):
         return -np.inf
@@ -205,7 +177,7 @@ sampler = emcee.EnsembleSampler(nwalkers, ndim, log_ll, pool = pool)
 # basically we get the logarithmic probability, then define the nwalkers and 
 # ndim, then we use this to sample from our probability distribution
 
-from cumm_rate import cummlative_rate
+from likelihood import cummlative_rate
 
 max_n = 100000
 # the algorithim needs  a certain number of steps before it can forget where
