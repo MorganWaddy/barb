@@ -1,1 +1,0 @@
-# MCMC 4 FRBs
