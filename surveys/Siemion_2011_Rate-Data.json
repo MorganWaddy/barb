@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Siemion 2011",
+	"nFRBs": 0,
+	"FWHM_2": 59.0,
+	"R": 1.25,
+	"beams": 30,
+	"tpb": 135.8,
+	"flux": [-1]
+	}
+]}

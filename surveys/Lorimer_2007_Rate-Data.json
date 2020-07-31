@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Lorimer 2007",
+	"nFRBs": 3,
+	"FWHM_2": 0.295,
+	"R": 0.11666667,
+	"beams": 13,
+	"tpb": 740.5,
+	"flux": [30, 0.25, 0.42]
+	}
+]}

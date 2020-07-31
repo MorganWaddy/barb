@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Ravi 2015",
+	"nFRBs": 1,
+	"FWHM_2": 0.2775,
+	"R": 0.11666667,
+	"beams": 13,
+	"tpb": 68.4,
+	"flux": [2.1]
+	}
+]}

@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Bhandari 2019",
+	"nFRBs": 1,
+	"FWHM_2": 24.6,
+	"R": 0.45,
+	"beams": 36,
+	"tpb": 1286,
+	"flux": [24.210526315789476]
+	}
+]}

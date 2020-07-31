@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Petroff 2014",
+	"nFRBs": 0,
+	"FWHM_2": 0.434,
+	"R": 0.11666667,
+	"beams": 13,
+	"tpb": 926,
+	"flux": [-1]
+	}
+]}

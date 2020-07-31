@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Deneva 2009",
+	"nFRBs": 0,
+	"FWHM_2": 0.1825,
+	"R":  0.03333333,
+	"beams": 7,
+	"tpb": 459.1,
+	"flux": [-1]
+	}
+]}

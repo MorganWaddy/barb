@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Burke-Spolaor 2014",
+	"nFRBs": 1,
+	"FWHM_2": 0.3075,
+	"R": 0.11666667,
+	"beams": 13,
+	"tpb": 917.3,
+	"flux": [0.3]
+	}
+]}

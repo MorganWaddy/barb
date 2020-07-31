@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Spitler 2014",
+	"nFRBs": 1,
+	"FWHM_2": 0.105,
+	"R": 0.03333333,
+	"beams": 7,
+	"tpb": 11503.3,
+	"flux": [0.4]
+	}
+]}

@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Law 2015",
+	"nFRBs": 0,
+	"FWHM_2": 0.12,
+	"R": 0.5,
+	"beams": 1,
+	"tpb": 166,
+	"flux": [-1]
+	}
+]}

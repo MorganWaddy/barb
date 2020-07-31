@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": "Keane 2010",
+	"nFRBs": 0,
+	"FWHM_2": 0.2235,
+	"R": 0.11666667,
+	"beams": 13,
+	"tpb": 1557.5,
+	"flux": [-1]
+	}
+]}
