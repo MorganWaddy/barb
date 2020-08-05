@@ -6,11 +6,12 @@ sample command: python auto-json.py -N <name> -Y <year> -n <nFRBs> -S <FWHM_2> -
 parser.add_argument('-N', '--name', help='name of main author in the paper', action='store', type=str, required=True)
 parser.add_argument('-Y', '--year', help='year of discovery', action='store', type=str, required=True)
 parser.add_argument('-n', '--nFRBs', help='number of FRBs', action='store', type=float, required=True)
-parser.add_argument('-S', '--FWHM_2', help='Sensitivity at FWHM divided by 2', action='store', type=float, required=True)
-parser.add_argument('-R', '--radius', help='FWHM diameter in arcminutes divided by 2 to get radius divide by 60 to get degrees', action='store', type=float, required=True)
+parser.add_argument('-S', '--FWHM_2', help='Sensitivity at FWHM divided by 2 (Janskys)', action='store', type=float, required=True)
+parser.add_argument('-R', '--radius', help='radius in degrees', action='store', type=float, required=True)
 parser.add_argument('-b', '--beams', help='number of beams', action='store', type=float, required=True)
-parser.add_argument('-t', '--tpb', help='time per beam', action='store', type=float, required=True)
-parser.add_argument('-f', '--flux', help='flux, do not seperate values with commas - only spaces are needed', action='store', nargs='+', type=float, default=[], required=True)
+parser.add_argument('-t', '--tpb', help='time per beam (beams*hr)', action='store', type=float, required=True)
+parser.add_argument('-f', '--flux', help='flux of the FRB (Janskys), do not seperate values with commas - only spaces are needed', action='store', nargs='+', type=float, default=[], required=True)
+# parser.add_argument('-s', '--spec_idx', help='spectral index, do not seperate values with commas - only spaces are needed', action='store', nargs='+', type=float, default=[], required=True)
 args = parser.parse_args()
 
 # define the name of the file
@@ -27,5 +28,6 @@ with open(filename, "w") as fobj:
     fobj.write("\t\"beams\": {0},\n".format(args.beams))
     fobj.write("\t\"tpb\": {0},\n".format(args.tpb))
     fobj.write("\t\"flux\": {0}\n".format(args.flux))
+#    fobj.write("\t\"spec_idx\": {0}\n".format(args.spec_idx))
     fobj.write("\t}\n")
     fobj.write("]}")
