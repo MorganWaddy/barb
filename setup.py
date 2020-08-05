@@ -8,6 +8,13 @@ setup(
     author_email='mdw4ux@virginia.edu',
     license='',
     description='Bayesian Rate Estimation for FRBs',
+    install_requires=[
+        'astropy', 
+        'numpy', 
+        'matplotlib', 
+        'tqdm', 
+        'scipy', 
+        'emcee'],
     python_requires='>=3.6',
     classifiers=[
         "Programming Language :: Python",
