@@ -1,4 +1,3 @@
-# this term is from the paper (Lawrence. et. al) - this function finds the effective area of the reciever
 def area(radius, b):
     # b is Euclidean scaling that is valid for any population with a fixed
     # luminosity distribution, as long as the luminosity does not evolve with
