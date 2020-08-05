@@ -25,7 +25,6 @@ def likelihood_list(data, alpha, beta):
     taa = time * A * alpha
     ll = 0
     for idx, nburst in enumerate(nFRBs):
-        # flux to the power of some gamma that is spec. idx
         # idx is just a number that identifies a place in the array
         if flux[idx] == [-1]:
             val = -taa[idx] * I[idx]
