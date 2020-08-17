@@ -6,14 +6,17 @@ matplotlib.use("Agg")
 import math
 from tqdm import tqdm
 import emcee
-import sys
 import json
 import logging
 import argparse
+import sys
+sys.path.append('bin/')
+
 from likelihood import area
 from likelihood import power_integral
 from likelihood import likelihood_list
 from likelihood import cummlative_rate
+from plotter import plotting
 from multiprocessing import cpu_count
 from multiprocessing import Pool
 
@@ -213,27 +216,5 @@ all_samples[:, 0] = np.log10(
 all_samples[:, 1] -= 1
 # 1 corresponds to alpha
 
-labels = [r"$\log \mathcal{R}$", r"$\alpha$"]
+plotting(all_samples)
 
-np.savez("{0}".format(args.allsamples), all_samples)
-logging.info("the name of the np array file is {0}".format(args.allsamples) + ".npz")
-all_samples
-
-all_samples = np.load("{0}".format(args.allsamples) + ".npz")["arr_0"]
-
-quantile_val = 0.99
-
-import corner
-
-plt.figure(figsize=(15, 15))
-corner.corner(
-    all_samples,
-    labels=labels,
-    quantiles=[(1 - 0.99) / 2, 0.5, 1 - (1 - 0.99) / 2],
-    show_titles=True,
-    bins=50,
-)
-# makes a corner plot displaying the projections of prob. distr. in space
-plt.savefig("rates_mc.png")
-plt.close("rates_mc.png")
-plt.clf()
