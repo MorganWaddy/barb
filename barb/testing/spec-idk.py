@@ -31,10 +31,10 @@ def obs(f_inc, radius, p):
 # log likelihood
 def logger(flux, radius, p):
     r_obs = obs(flux, radius, p)
-    # f1 = 
-    # integral1 = sp.integrate.quad(f1, )
-    # f2 = 
-    # Integral2 = sp.integrate.dblquad(f2, )
+    f1 = lambda u: r_obs
+    integral1 = sp.integrate.quad(f1, 0, np.inf)
+    f2 = lambda u, v: r_obs
+    integral2 = sp.integrate.dblquad(f2, 0, np.inf, lambda v: 0, lambda v: np.inf)
     l1 = -tpb*(integral1) + np.sum(math.log(r_obs[, base]))
     l2 = -tpb*(integral2) + np.sum(math.log(r_obs[, base]))
     loggy = np.sum([l1, l2])
