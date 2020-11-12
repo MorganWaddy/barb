@@ -1,0 +1,10 @@
+{ "properties": [{
+	"surveys": [],
+	"nFRBs": [],
+	"FWHM_2": [],
+	"R": [],
+	"beams": [],
+	"tpb": [],
+	"flux": []
+	}
+]}

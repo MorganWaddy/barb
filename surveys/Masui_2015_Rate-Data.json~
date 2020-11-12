@@ -1,0 +1,10 @@
+{ 'properties': [{
+	'surveys': 'Masui 2015',
+	'nFRBs': 1,
+	'FWHM_2': 0.27,
+	'R': 0.125,
+	'beams': 1,
+	'tpb': 400,
+	'flux': [0.6]
+	}
+]}

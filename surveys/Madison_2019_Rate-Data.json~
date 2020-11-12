@@ -1,0 +1,18 @@
+{ "properties": [{
+  	"surveys": "Madison (Arecibo) 2019",
+	"nFRBs": 0,
+	"FWHM_2": 0.021,
+	"R": 0.029166666666666667,
+	"beams": 1,
+	"tpb": 20,
+	"flux": [None]
+	},
+	{ "surveys": "Madison (GBT) 2019",
+	"nFRBs": 0,
+	"FWHM_2": 0.087,
+	"R": 0.075,
+	"beams": 1,
+	"tpb": 60,
+	"flux": [None]
+	}
+]}
