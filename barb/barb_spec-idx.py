@@ -1,4 +1,5 @@
 import numpy as np
+import numpy as np
 import pylab as plt
 import matplotlib
 
@@ -10,10 +11,12 @@ import sys
 import json
 import logging
 import argparse
-from likelihood import area
-from likelihood import power_integral
-from likelihood import likelihood_list
-from likelihood import cummlative_rate
+sys.path.append('bin/')
+
+from likelihood_spec-idx import area
+from likelihood_spec-idx import power_integral
+from likelihood_spec-idx import likelihood_list
+from likelihood_spec-idx import cummlative_rate
 from multiprocessing import cpu_count
 from multiprocessing import Pool
 
@@ -73,8 +76,6 @@ flux = []
 # frequency of observation
 if args.freq is not None:
     freq = []
-    # spectral index
-    # spec_idx = []
 
 # data feed in structure
 j = len(args.dat)
@@ -112,18 +113,29 @@ freq = np.array(freq)
 time = tpb * beams
 
 global data
-data = nFRBs, R, time, FWHM_2, flux
+if args.freq is not None:
+    data = nFRBs, R, time, FWHM_2, flux, freq
+else:
+    data = nFRBs, R, time, FWHM_2, flux
 logging.info(str(data) + "\n")
 
 
 def log_ll(junk):
     alpha, beta = junk
-    nFRBs, radius, time, sensitivity, flux = data
+    if args.freq is not None:
+        freq, nFRBs, radius, time, sensitivity, flux = data
+    else:
+        nFRBs, radius, time, sensitivity, flux = data
     alpha = 10 ** alpha
     if beta < 1:
         return -np.inf
     return likelihood_list(data, alpha=alpha, beta=beta)
 
+log_ll([0.97504624, 1.91163861])
+# log_ll([alpha,beta])
+
+logly = log_ll([0.97504624, 1.91163861])
+logging.info("log_ll([0.97504624, 1.91163861]) = " + str(logly) + "\n\n")
 
 bb = np.linspace(0.1, 3, 100)
 lk = [log_ll([np.log10(586.88 / (24 * 41253)), b]) for b in bb]
@@ -222,55 +234,5 @@ all_samples[:, 0] = np.log10(
 all_samples[:, 1] -= 1
 # 1 corresponds to alpha
 
-labels = [r"$\log \mathcal{R}$", r"$\alpha$"]
+plotting(all_samples)
 
-np.savez("{0}".format(args.allsamples), all_samples)
-logging.info("the name of the np array file is {0}".format(args.allsamples) + ".npz")
-all_samples
-
-all_samples = np.load("{0}".format(args.allsamples) + ".npz")["arr_0"]
-
-quantile_val = 0.99
-
-import corner
-
-plt.figure(figsize=(15, 15))
-corner.corner(
-    all_samples,
-    labels=labels,
-    quantiles=[(1 - 0.99) / 2, 0.5, 1 - (1 - 0.99) / 2],
-    show_titles=True,
-    bins=50,
-)
-# makes a corner plot displaying the projections of prob. distr. in space
-plt.savefig("rates_mc.png")
-plt.close("rates_mc.png")
-plt.clf()
-
-# Spectral index
-if args.freq is not None:
-    def probby(spex):
-        # runs through all the data to return the likelihood of an FRB at an observing frequency
-        # need to edit
-        nFRBs, radius, time, sensitivity, flux, freq = spex
-        A = area(radius, beta - 1)
-        I = power_integral(sensitivity, beta)
-        taa = time * A * alpha
-        prob = 0
-        for nmbr, numburst in enumerate(nFRBs):
-            if flux[nmbr] == [-1]:
-                value = # not sure how to do this
-            else:
-                value = # not sure how to do this
-            prob += value
-            return prob
-        # mean auto-correlation function of the spectrum
-        def spec_func():
-            spec_amp = np.mean(flux)
-            delv = np.std(freq)
-            freq_sort = np.sort(freq)
-            v_prime = freq_sort[-1] - freq_sort[0]
-            chng = v_prime + delv
-            xi(delv) = np.mean([()- spec_amp][()- spec_amp])/(spec_amp**2)
-            # add a plot that shows FRBs vs spectral index
-            # make another corner plot displaying projections of prob. dist. pf spec. idx.
