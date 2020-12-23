@@ -68,20 +68,23 @@ def power_integral(sensitivity, beta):
 def freq_term(freq, freq_0):
     # alpha = Rref*gamma
     freq_0 = 1
-    return (freq/freq_0)**(alpha*gamma)
+    freqqy = (freq/freq_0)**(alpha*gamma)
+    return freqqy
 
 
 def likelihood_list(data, alpha, beta):
     # runs through all data to return the likelihood that there will be
     # an FRB
-    # a = Rref(freq/freq_0)**(alpha*gamma)
+    # a = Rref(freqqy**(alpha*gamma))
     if args.freq is True:
         freq, nFRBs, radius, time, sensitivity, flux = data
+        freqqy = freq_term(freq, freq_0)
     else:
         nFRBs, radius, time, sensitivity, flux = data
     A = area(radius, beta - 1)
     gamma = beta - 1
-    I = (-gamma)*((power_integral(sensitivity, beta))**(-gamma))
+    Rref = alpha / gamma
+    I = (-gamma)*Rref*((power_integral(sensitivity, beta))**(-gamma))
     taa = time * A * alpha
     ll = 0
     for idx, nburst in enumerate(nFRBs):
@@ -91,9 +94,9 @@ def likelihood_list(data, alpha, beta):
         else:
             if args.freq is True:
                 val = (
-                    -taa[idx] * I[idx]
+                    -taa[idx] * I[idx] * freqqy
                      + nburst * np.log(taa[idx])
-                     - beta * np.sum(np.log(((flux[idx])**((-gamma)-1))*(freq**(alpha*gamma))))
+                     - beta * np.sum(np.log(((flux[idx])**((-gamma)-1))*(freqqy)))
                 )
             else:
                 val = (
