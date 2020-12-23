@@ -1,5 +1,4 @@
 import numpy as np
-import numpy as np
 import pylab as plt
 import matplotlib
 
@@ -13,10 +12,10 @@ import logging
 import argparse
 sys.path.append('bin/')
 
-from likelihood_spec-idx import area
-from likelihood_spec-idx import power_integral
-from likelihood_spec-idx import likelihood_list
-from likelihood_spec-idx import cummlative_rate
+from likelihood_specidx import area
+from likelihood_specidx import power_integral
+from likelihood_specidx import likelihood_list
+from likelihood_specidx import cummlative_rate
 from multiprocessing import cpu_count
 from multiprocessing import Pool
 
@@ -49,12 +48,15 @@ parser.add_argument(
     "-s",
     "--allsamples",
     help="supply the name of the output numpy array of the samples",
+    nargs=1,
     action="store",
     required=True,
 )
 parser.add_argument(
     "-f",
     "--freq",
+    action="store",
+    nargs='?',
     help="to estimate spectral index limits use this flag",
     required=False,
 )
@@ -74,7 +76,7 @@ tpb = []
 # Flux of FRB
 flux = []
 # frequency of observation
-if args.freq is not None:
+if args.freq is True:
     freq = []
 
 # data feed in structure
@@ -97,9 +99,14 @@ if j > 0:
                 beams = np.append(beams, p["beams"])
                 tpb = np.append(tpb, p["tpb"])
                 flux.append(p["flux"])
-                if p["freq"] in info["properties"]:
-                    freq = np.append(freq, p["freq"])
         fobj.close()
+elif j > 0:
+    if args.freq is True:
+        for e in args.dat:
+            with open(e, "r") as fobj:
+                info = json.load(fobj)
+                freq.append(p["freq"])
+                fobj.close()
 else:
     logging.info("No data was supplied, please supply data on the command line!")
 nFRBs = np.array(nFRBs)
@@ -107,13 +114,14 @@ FWHM_2 = np.array(FWHM_2)
 R = np.array(R)
 beams = np.array(beams)
 tpb = np.array(tpb)
-freq = np.array(freq)
+if args.freq is True:
+    freq = np.array(freq)
 
 
 time = tpb * beams
 
 global data
-if args.freq is not None:
+if args.freq is True:
     data = nFRBs, R, time, FWHM_2, flux, freq
 else:
     data = nFRBs, R, time, FWHM_2, flux
@@ -122,7 +130,7 @@ logging.info(str(data) + "\n")
 
 def log_ll(junk):
     alpha, beta = junk
-    if args.freq is not None:
+    if args.freq is True:
         freq, nFRBs, radius, time, sensitivity, flux = data
     else:
         nFRBs, radius, time, sensitivity, flux = data
