@@ -16,6 +16,7 @@ from likelihood_specidx import area
 from likelihood_specidx import power_integral
 from likelihood_specidx import likelihood_list
 from likelihood_specidx import cummlative_rate
+from plotter import plotting
 from multiprocessing import cpu_count
 from multiprocessing import Pool
 
@@ -55,8 +56,7 @@ parser.add_argument(
 parser.add_argument(
     "-f",
     "--freq",
-    action="store",
-    nargs='?',
+    action="store_true",
     help="to estimate spectral index limits use this flag",
     required=False,
 )
