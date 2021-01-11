@@ -5,7 +5,8 @@
 	"R": 0.075,
 	"beams": 1,
 	"tpb": 2194,
-	"flux": [-1]
+	"flux": [-1],
+	"freq": [1365, 1400, 1420, 1665]
 	},
 	{ "surveys": "This work (X-band)",
 	"nFRBs": 0,
@@ -13,7 +14,8 @@
 	"R": 0.075,
 	"beams": 1,
 	"tpb": 615,
-	"flux": [-1]
+	"flux": [-1],
+	"freq": [1440]
 	},
 	{ "surveys": "This work (C-band)",
 	"nFRBs": 0,
@@ -21,7 +23,8 @@
 	"R": 0.075,
 	"beams": 1,
 	"tpb": 556,
-	"flux": [-1]
+	"flux": [-1],
+	"freq": [1440]
 	},
 	{ "surveys": "This work (Ku-band)",
 	"nFRBs": 0,
@@ -29,7 +32,8 @@
 	"R": 0.075,
 	"beams": 1,
 	"tpb": 210,
-	"flux": [-1]
+	"flux": [-1],
+	"freq": [1440]
 	},
 	{ "surveys": "This work (Mustang)",
 	"nFRBs": 0,
@@ -37,6 +41,7 @@
 	"R": 0.075,
 	"beams": 1,
 	"tpb": 181,
-	"flux": [-1]
+	"flux": [-1],
+	"freq": [1440]
 	}
 ]}
