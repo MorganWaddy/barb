@@ -53,22 +53,22 @@ def area(radius, gamma):
     # b is Euclidean scaling that is valid for any population with a fixed
     # luminosity distribution, as long as the luminosity does not evolve with
     # redshift and the population has a uniform spatial distribution
-    ar = np.pi * radius * radius / (gamma * np.log(2))
+    ar = (np.pi * radius ** 2) / (gamma * np.log(2))
     beta = gamma + 1
     return ar
 # nothing should change for this function
 
 def power_integral(sensitivity, beta):
     # references the cumm. rate for observed fluxes > 0 (from paper)
-    return (sensitivity ** -(beta - 1)) / (beta - 1)
+    return (sensitivity ** -(beta - 1))
     # sensitivity is sigma, measured in janskys
     # from appendix A:
     # beta = gamma + 1
 
 def freq_term(freq, freq_0):
     # alpha = Rref*gamma
-    freq_0 = 1
-    freqqy = (freq/freq_0)**(alpha*gamma)
+    freq_ref = 1
+    freqqy = (freq/freq_ref) ** -(alpha*gamma)
     return freqqy
 
 
@@ -78,15 +78,16 @@ def likelihood_list(data, alpha, beta):
     # a = Rref(freqqy**(alpha*gamma))
     if args.freq is True:
         freq, nFRBs, radius, time, sensitivity, flux = data
-        freqqy = freq_term(freq, freq_0)
+        freqqy = freq_term(freq, freq_ref)
     else:
         nFRBs, radius, time, sensitivity, flux = data
     A = area(radius, beta - 1)
     gamma = beta - 1
     Rref = alpha / gamma
-    I = (-gamma)*Rref*((power_integral(sensitivity, beta))**(-gamma))
+    I = (power_integral(sensitivity, beta))
     taa = time * A * alpha
     ll = 0
+    bandw = 960 # MHz
     for idx, nburst in enumerate(nFRBs):
         # idx is just a number that identifies a place in the array
         if flux[idx] == [-1]:
@@ -94,9 +95,11 @@ def likelihood_list(data, alpha, beta):
         else:
             if args.freq is True:
                 val = (
-                    -taa[idx] * I[idx] * freqqy
-                     + nburst * np.log(taa[idx])
-                     - beta * np.sum(np.log(((flux[idx])**((-gamma)-1))*(freqqy)))
+                        -(((taa[idx] * Rref) / (1 - (alpha *gamma))) * I[idx]
+                         * (bandw ** (1 - (alpha *gamma))))
+                         + nburst * np.log(taa[idx])
+                         + np.sum(np.log(-Rref*((np.pi*radius**2)/( np.log(2)))
+                                          * freqqy * (flux[idx])**(-gamma - 1)))
                 )
             else:
                 val = (
