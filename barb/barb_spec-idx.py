@@ -10,7 +10,7 @@ import sys
 import json
 import logging
 import argparse
-sys.path.append('bin/')
+#sys.path.append('../bin/')
 
 from likelihood_specidx import area
 from likelihood_specidx import power_integral
@@ -54,10 +54,9 @@ parser.add_argument(
     required=True,
 )
 parser.add_argument(
-    "-f",
     "--freq",
-    action="store_true",
     help="to estimate spectral index limits use this flag",
+    action="store_true",
     required=False,
 )
 args = parser.parse_args()

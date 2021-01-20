@@ -21,7 +21,7 @@ global hunk
 # instantaneous rate 
 def obs(f_inc, radius, p):
     rs = np.power(radius/R, 2)
-    # p = ?
+    p = areas(radius, b) 
     # p is the function representing beam attenuation
     f_obs = f_inc * p
     rat = np.power(2, rs) * f_obs
@@ -39,3 +39,5 @@ def logger(flux, radius, p):
     l2 = -tpb*(integral2) + np.sum(math.log(r_obs[, base]))
     loggy = np.sum([l1, l2])
     return loggy
+
+# spectral index

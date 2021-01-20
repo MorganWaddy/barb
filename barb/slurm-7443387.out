@@ -1,0 +1,2 @@
+usage: barb_spec-idx.py [-h] -D DAT [DAT ...] -c CPUS [CPUS ...] -s ALLSAMPLES
+barb_spec-idx.py: error: unrecognized arguments: -f
