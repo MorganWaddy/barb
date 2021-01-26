@@ -1,10 +1,14 @@
+import glob
+
 from setuptools import setup
+
 setup(
     name='barb',
     version='0.1',
     packages=['barb'],
     url='https://github.com/MorganWaddy/barb',
     author='Morgan Waddy',
+    scripts=glob.glob("bin/*"),
     author_email='mdw4ux@virginia.edu',
     license='',
     description='Bayesian Rate Estimation for FRBs',
