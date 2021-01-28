@@ -10,8 +10,8 @@ import sys
 import json
 import logging
 import argparse
-sys.path.append('../bin/')
 
+sys.path.append('bin/')
 from likelihood_specidx import area
 from likelihood_specidx import power_integral
 from likelihood_specidx import likelihood_list
@@ -131,9 +131,9 @@ logging.info(str(data) + "\n")
 def log_ll(junk):
     alpha, beta = junk
     if args.freq is True:
-        freq, nFRBs, radius, time, sensitivity, flux = data
+        nFRBs, R, time, FWHM_2, flux, freq = data
     else:
-        nFRBs, radius, time, sensitivity, flux = data
+        nFRBs, R, time, FWHM_2, flux = data
     alpha = 10 ** alpha
     if beta < 1:
         return -np.inf
