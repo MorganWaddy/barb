@@ -22,6 +22,7 @@ from multiprocessing import Pool
 
 logging.basicConfig(filename="FRB-rate-calc.log", level=logging.INFO)
 
+# sbatch -N1 -n19 --wrap="python barb/barb_specidx.py -f -D surveys/*.json -c 19 -s all_samples_MCMC"
 parser = argparse.ArgumentParser(
     description="""Bayesian Rate-Estimation for FRBs (BaRB)
 sample command: python barb_specidx.py -f -D <name of the surveys> -c <number of cpus> -s <name of npz file>
@@ -98,15 +99,15 @@ if j > 0:
                 R = np.append(R, p["R"])
                 beams = np.append(beams, p["beams"])
                 tpb = np.append(tpb, p["tpb"])
-                flux.append(p["flux"])
-        fobj.close()
-elif j > 0:
-    if args.freq is True:
-        for e in args.dat:
-            with open(e, "r") as fobj:
-                info = json.load(fobj)
-                freq.append(p["freq"])
-                fobj.close()
+                flux = np.append(flux, p["flux"])
+                if args.freq is True:
+                    for e in args.dat:
+                        with open(e, "r") as fobj:
+                            info = json.load(fobj)
+                            freq = np.append(freq, p["freq"])
+                else:
+                    freq.append(1)
+            fobj.close()
 else:
     logging.info("No data was supplied, please supply data on the command line!")
 nFRBs = np.array(nFRBs)
@@ -119,6 +120,7 @@ if args.freq is True:
 
 
 time = tpb * beams
+flux = np.array(flux)
 
 global data
 if args.freq is True:
