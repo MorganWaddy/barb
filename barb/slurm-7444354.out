@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "barb_spec-idx.py", line 15, in <module>
-    from likelihood_specidx import area
-ModuleNotFoundError: No module named 'likelihood_specidx'
