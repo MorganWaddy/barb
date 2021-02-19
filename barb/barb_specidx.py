@@ -19,17 +19,18 @@ from likelihood_specidx import cummlative_rate
 from plotter import plotting
 from multiprocessing import cpu_count
 from multiprocessing import Pool
-
-logging.basicConfig(filename="FRB-rate-calc.log", level=logging.INFO)
+# from arg_parser import read_in
+from stats import sampling
 
 # sbatch -N1 -n19 --wrap="python barb/barb_specidx.py -f -D surveys/*.json -c 19 -s all_samples_MCMC"
+logging.basicConfig(filename="FRB-rate-calc.log", level=logging.INFO)
 parser = argparse.ArgumentParser(
     description="""Bayesian Rate-Estimation for FRBs (BaRB)
 sample command: python barb_specidx.py -f -D <name of the surveys> -c <number of cpus> -s <name of npz file>
 
 Surveys on the original data set: Agarwal 2019, Masui 2015, Men 2019, Bhandari 2018, Golpayegani 2019, Oslowski 2019, GREENBURST, Bhandari 2019, Qiu 2019, Shannon 2018, Madison 2019, Lorimer 2007, Deneva 2009, Keane 2010, Siemion 2011, Burgay 2012, Petroff 2014, Spitler 2014, Burke-Spolaor 2014, Ravi 2015, Petroff 2015, Law 2015, Champion 2016""",
     formatter_class=argparse.RawTextHelpFormatter,
-)
+    )
 parser.add_argument(
     "-D",
     "--dat",
@@ -37,7 +38,7 @@ parser.add_argument(
     action="store",
     nargs="+",
     required=True,
-)
+    )
 parser.add_argument(
     "-c",
     "--cpus",
@@ -45,7 +46,7 @@ parser.add_argument(
     action="store",
     nargs="+",
     required=True,
-)
+    )
 parser.add_argument(
     "-s",
     "--allsamples",
@@ -53,14 +54,14 @@ parser.add_argument(
     nargs=1,
     action="store",
     required=True,
-)
+    )
 parser.add_argument(
     "-f",
     "--freq",
     help="to estimate spectral index limits use this flag",
     action="store_true",
     required=False,
-)
+    )
 args = parser.parse_args()
 
 surveys = []
@@ -77,9 +78,7 @@ tpb = []
 # Flux of FRB
 flux = []
 # frequency of observation
-if args.freq is True:
-    freq = []
-
+freq = []
 # data feed in structure
 j = len(args.dat)
 k = j + 1
@@ -106,8 +105,8 @@ if j > 0:
                             info = json.load(fobj)
                             freq = np.append(freq, p["freq"])
                 else:
-                    freq.append(1)
-            fobj.close()
+                    freq = np.append(freq, 1)
+                    fobj.close()
 else:
     logging.info("No data was supplied, please supply data on the command line!")
 nFRBs = np.array(nFRBs)
@@ -117,10 +116,11 @@ beams = np.array(beams)
 tpb = np.array(tpb)
 if args.freq is True:
     freq = np.array(freq)
-
-
+    
+    
 time = tpb * beams
 flux = np.array(flux)
+
 
 global data
 if args.freq is True:
@@ -196,26 +196,10 @@ autocorr = np.empty(max_n)
 old_tau = np.inf
 
 # sample for up to max_n steps
-for sample in sampler.sample(p0, iterations=max_n, progress=True):
-    # only check convergence every 100 steps
-    if sampler.iteration % 100:
-        continue
-
-    # compute the autocorrelation time so far
-    tau = sampler.get_autocorr_time(tol=0)
-    autocorr[index] = np.mean(tau)
-    index += 1
-
-    # check convergence
-    converged = np.all(tau * 100 < sampler.iteration)
-    converged &= np.all(np.abs(old_tau - tau) / tau < 0.01)
-    if converged:
-        break
-    old_tau = tau
+old_tau = sampling(p0)
 
 pool.close()
 # this function samples until it converges at a estimate of rate for the events
-
 
 tau = sampler.get_autocorr_time()
 # computes an estimate of the autocorrelation time for each parameter
