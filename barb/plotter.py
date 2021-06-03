@@ -8,46 +8,9 @@ import sys
 import argparse
 import logging
 import emcee
-
-parser = argparse.ArgumentParser(
-    description="""Bayesian Rate-Estimation for FRBs (BaRB)
-sample command: python barb.py -f -D <name of the surveys> -c <number of cpus> -s <name of npz file>
-
-Surveys on the original data set: Agarwal 2019, Masui 2015, Men 2019, Bhandari 2018, Golpayegani 2019, Oslowski 2019, GREENBURST, Bhandari 2019, Qiu 2019, Shannon 2018, Madison 2019, Lorimer 2007, Deneva 2009, Keane 2010, Siemion 2011, Burgay 2012, Petroff 2014, Spitler 2014, Burke-Spolaor 2014, Ravi 2015, Petroff 2015, Law 2015, Champion 2016""",
-    formatter_class=argparse.RawTextHelpFormatter,
-)
-parser.add_argument(
-    "-D",
-    "--dat",
-    help="supply the input data after this flag",
-    action="store",
-    nargs="+",
-    required=True,
-)
-parser.add_argument(
-    "-c",
-    "--cpus",
-    help="supply the number of cpus you want to be used",
-    action="store",
-    nargs="+",
-    required=True,
-)
-parser.add_argument(
-    "-s",
-    "--allsamples",
-    help="supply the name of the output numpy array of the samples",
-    nargs=1,
-    action="store",
-    required=True,
-)
-parser.add_argument(
-    "-f",
-    "--freq",
-    action="store_true",
-    help="to estimate spectral index limits use this flag",
-    required=False,
-)
-args = parser.parse_args()
+import arg_stater
+from MCMC_definer import cpu_num
+from MCMC_definer import MCMCdef
 
 def check_work1(bb, lk):
     plt.plot(bb - 1, -1 * np.array(lk))
@@ -66,6 +29,43 @@ def check_work2(varr1):
     plt.savefig("MCMC_hist2-check.png")
     plt.close("MCMC_hist2-check.png")
     plt.clf()
+
+def tau_definer(varr2, vargroup, varrest, cpu_num):
+    ndim, nwalkers, ivar, p0 = MCMCdef()
+    ncpu = cpu_num
+    pool = Pool(ncpu)
+    # pool paralelizes the execution of the functions over the cpus
+    alpha, beta = varrest
+    if args.freq is True:
+        nFRBs, R, time, FWHM_2, flux, freq = vargroup
+    else:
+        nFRBs, R, time, FWHM_2, flux = vargroup
+   
+    sampler = emcee.EnsembleSampler(nwalkers, ndim, log_ll(varrest, vargroup), pool=pool)
+
+    tau = sampler.get_autocorr_time()
+    # computes an estimate of the autocorrelation time for each parameter
+    burnin = int(2 * np.max(tau))
+    # steps that should be discarded
+    thin = int(0.5 * np.min(tau))
+    samples = sampler.get_chain(discard=burnin, flat=True, thin=thin)
+    # gets the stored chain of MCMC samples
+    # flatten the chain across ensemble, take only thin steps, discard burn-in
+    log_prob_samples = sampler.get_log_prob(discard=burnin, flat=True, thin=thin)
+    # gets the chain of log probabilities evaluated at the MCMC samples
+    # discard burn-in steps, flatten chain across ensemble, take only thin steps
+    return tau, burnin, thin, samples, log_prob_samples
+
+def storing(samples):
+    all_samples = samples
+    # an array of the stored chain of MCMC samples
+    all_samples[:, 0] = np.log10(
+        (24 * 41253) * (10 ** all_samples[:, 0]) / (all_samples[:, 1] - 1)
+        )
+    # 0 corresponds to R
+    all_samples[:, 1] -= 1
+    # 1 corresponds to alpha
+    return all_samples
 
 def plotting(allsamples):
     labels = [r"$\log \mathcal{R}$", r"$\alpha$"]
