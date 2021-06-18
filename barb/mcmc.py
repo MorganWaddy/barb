@@ -1,6 +1,6 @@
 from multiprocessing import Pool
 from multiprocessing import cpu_count
-from likelihood import log_ll
+from barb.likelihood import log_ll
 import sys
 import emcee
 from tqdm import tqdm
@@ -12,11 +12,11 @@ def sampling(p0, vargroup, cpu_num, nwalkers, ndim, filename = 'MCMC_results.h5'
     backend = emcee.backends.HDFBackend(filename)
     backend.reset(nwalkers, ndim)
     ncpu = cpu_num
-    # pool = Pool(ncpu)
+    pool = Pool(ncpu)
     # pool paralelizes the execution of the functions over the cpus
     nFRBs, R, time, FWHM_2, flux = vargroup
    
-    sampler = emcee.EnsembleSampler(nwalkers, ndim, log_ll, args = (vargroup), backend = backend)
+    sampler = emcee.EnsembleSampler(nwalkers, ndim, log_ll, args = (vargroup), backend = backend, pool=pool)
     # tracking how the average autocorrelation time estimate changes
     index=0
     autocorr=np.empty(max_n)
