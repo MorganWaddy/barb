@@ -1,6 +1,8 @@
-import matplotlib.pyplot as plt
+import pylab as plt
 import numpy as np
 import corner
+import matplotlib
+matplotlib.use("Agg")
 
 def check_likelihood(bb, lk, save = False):
     # in the mcmc you maximize the likelihood, this is to check if the functions are working
@@ -17,7 +19,7 @@ def make_hist(data, save = False, output_name = 'hist_MCMC'):
         plt.savefig(output_name)
         plt.close(output_name)
 
-def make_corner(allsamples, save = False, figname = 'rates_mc.png'):
+def make_corner(allsamples, figname = 'rates_mc.png', save = False):
     labels = [r"$\log \mathcal{R}$", r"$\alpha$"]
 
     quantile_val = 0.99
