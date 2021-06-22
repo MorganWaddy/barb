@@ -2,6 +2,7 @@ import numpy as np
 import json
 import logging
 
+
 def read_in(jsons):
     # data feed in structure
     j = len(jsons)
@@ -17,8 +18,7 @@ def read_in(jsons):
         tpb = []
         flux = []
         logging.info("Sanity Check:")
-        logging.info(
-            "The number of user file(s) supplied is {0}".format(j) + "\n")
+        logging.info("The number of user file(s) supplied is {0}".format(j) + "\n")
         logging.info("The supplied file(s) is/are {0}".format(filename) + "\n")
         for e in jsons:
             with open(e, "r") as fobj:
@@ -33,5 +33,6 @@ def read_in(jsons):
                     flux = np.append(flux, p["flux"])
         else:
             logging.info(
-                "No data was supplied, please supply data on the command line!")
+                "No data was supplied, please supply data on the command line!"
+            )
     return nFRBs, FWHM_2, R, tpb, flux
