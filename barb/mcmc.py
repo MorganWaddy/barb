@@ -20,7 +20,7 @@ def sampling(
     # pool paralelizes the execution of the functions over the cpus
     pool = Pool(ncpu)
     sampler = emcee.EnsembleSampler(
-        nwalkers, ndim, log_ll, pool=pool, backend=backend
+        nwalkers, ndim, log_ll, args = (vargroup), pool=pool, backend=backend
         )
     max_n = max_n
 
