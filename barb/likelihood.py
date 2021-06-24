@@ -1,5 +1,4 @@
 import numpy as np
-from barb.read_inputs import read_in
 
 
 def area(R, gamma):
@@ -43,9 +42,10 @@ def likelihood_list(vargroup, alpha, beta):
         ll += val
     return ll
 
-def log_ll(varrest):
+def log_ll(varrest, nFRBs, FWHM_2, R, beams, tpb, flux):
     alpha, beta = varrest
     alpha = 10 ** alpha
+    vargroup = nFRBs, FWHM_2, R, beams, tpb, flux
     if beta < 1:
         return -np.inf
         # returns a positive infinity multiplied by -1
