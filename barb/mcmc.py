@@ -15,11 +15,13 @@ def sampling(
     ):
     backend = emcee.backends.HDFBackend(filename)
     backend.reset(nwalkers, ndim)
-    nFRBs, R, time, FWHM_2, flux = vargroup
+    nFRBs, FWHM_2, R, beams, tpb, flux = vargroup
     ncpu = cpu_num
     # pool paralelizes the execution of the functions over the cpus
     pool = Pool(ncpu)
-    sampler = emcee.EnsembleSampler(nwalkers, ndim, log_ll, backend=backend, pool=pool)
+    sampler = emcee.EnsembleSampler(
+        nwalkers, ndim, log_ll, pool=pool, backend=backend
+        )
     max_n = max_n
 
     # tracking how the average autocorrelation time estimate changes
@@ -30,24 +32,25 @@ def sampling(
     old_tau = np.inf
 
     # sample for up to max_n steps
+    # this function samples until it converges at a estimate of 
+    # rate for the events
     for sample in sampler.sample(p0, iterations=max_n, progress=True):
         # only check convergence every 100 steps
         if sampler.iteration % 100:
             continue
-
+        
         # compute the autocorrelation time so far
-        # using tol=0 means that we'll always get an estimate even
-        # if it isn't trustworthy
         tau = sampler.get_autocorr_time(tol=0)
         autocorr[index] = np.mean(tau)
         index += 1
-
+        
         # check convergence
         converged = np.all(tau * 100 < sampler.iteration)
         converged &= np.all(np.abs(old_tau - tau) / tau < 0.01)
         if converged:
             break
         old_tau = tau
+    pool.close()
     return old_tau
 
 
