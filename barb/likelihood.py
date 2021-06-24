@@ -1,4 +1,5 @@
 import numpy as np
+from barb.read_inputs import read_in
 
 
 def area(R, gamma):
@@ -23,9 +24,10 @@ def likelihood_list(vargroup, alpha, beta):
     # runs through all data to return the likelihood that there will be
     # an FRB
     # from appendix A: alpha = Rref*gamma
-    nFRBs, R, time, FWHM_2, flux = vargroup
+    nFRBs, FWHM_2, R, beams, tpb, flux = vargroup
     A = area(R, beta - 1)
     I = power_integral(FWHM_2, beta)
+    time = tpb*beams
     taa = time * A * alpha
     ll = 0
     for idx, nburst in enumerate(nFRBs):
@@ -41,7 +43,6 @@ def likelihood_list(vargroup, alpha, beta):
         ll += val
     return ll
 
-
 def log_ll(varrest):
     alpha, beta = varrest
     alpha = 10 ** alpha
@@ -49,6 +50,6 @@ def log_ll(varrest):
         return -np.inf
         # returns a positive infinity multiplied by -1
         # (np.inf is a floating point constant value in the numpy library)
-    if alpha < 0 or alpha > 5:
-        return -np.inf
+#    if alpha < 0 or alpha > 5:
+#        return -np.inf
     return likelihood_list(vargroup, alpha=alpha, beta=beta)
