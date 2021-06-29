@@ -1,10 +1,19 @@
 #!/usr/bin/env python
 import numpy as np
-from barb.read_inputs import read_in
 import glob
 import argparse
+import logging
+import sys
+sys.path.append('.')
+sys.path.append('../barb/')
+sys.path.append('../')
+
+
+from barb.read_inputs import read_in
 from barb.plotting import make_corner
+from barb.likelihood import likelihood_list, log_ll
 from barb.mcmc import sampling, convert_params, read_samples
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -28,14 +37,12 @@ Surveys on the original data set: Agarwal 2019, Masui 2015, Men 2019, Bhandari 2
         "--cpus",
         help="supply the number of cpus you want to be used",
         action="store",
-        #    nargs=1,
         required=True,
     )
     parser.add_argument(
         "-r",
         "--results",
         help="supply the name of the h5 result file that will stored from the mcmc",
-        #    nargs=1,
         action="store",
         required=True,
     )
@@ -43,14 +50,12 @@ Surveys on the original data set: Agarwal 2019, Masui 2015, Men 2019, Bhandari 2
         "-n",
         "--cornername",
         help="supply the name of the corner plot producd from the mcmc results",
-        #    nargs=1,
         action="store",
         required=True,
     )
     parser.add_argument(
         "-m",
         "--max_n",
-        #    nargs=1,
         action="store",
         help="the maximum number of itertions the mcmc sampler will run",
         required=True,
@@ -63,18 +68,29 @@ Surveys on the original data set: Agarwal 2019, Masui 2015, Men 2019, Bhandari 2
     h5name = "{}".format(args.results)
     cpu_num = int(args.cpus)
 
+    # a logging file that tracks information going into the program
+    logging.basicConfig(filename="FRB-rate-calc.log", level=logging.INFO)
+    logging.info("The logging file was created" + "\n")
+
+    global varrgroup
     varrgroup = read_in(files)
+    logging.info("Data Provided: {0}".format(varrgroup) + "\n")
 
     ndim, nwalkers = 2, 1200
     # walkers are copies of a system evolving towards a minimum
     ivar = np.array([np.log10(15), 2.5])
     # ivar is an intermediate variable for sampling
     p0 = ivar + 0.05 * np.random.uniform(size=(nwalkers, ndim))
-    # returns a uniform random distribution mimicking the distribution of the data
+    # returns a uniform random distribution mimicking the distribution 
+    # of the data
+    
+    logging.info("{0} CPUs".format(cpu_num))
 
-    old_tau, sampler = sampling(
-        p0, varrgroup, cpu_num, nwalkers, ndim, filename=h5name, max_n=max_n
+    old_tau = sampling(
+        p0, varrgroup, cpu_num, nwalkers, ndim, 
+        filename=h5name, max_n=max_n
     )
+    logging.info("Tau from the Sampler: {0}".format(old_tau) + "\n")
 
     samples = read_samples(h5name)
     converted_params = convert_params(samples)
