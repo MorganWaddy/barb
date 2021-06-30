@@ -19,7 +19,7 @@ Second, group your json file with the json data files. <br />
 
 Third, run the program.
 ```bash
-barb.py -D <name of the surveys> -c <number of cpus> -s <name of npz file>
+bin/run_analysis.py -D <name of the surveys> -c <number of cpus> -r <name of h5 file> -n <name of final plot> -m <maximum number of iterations>
 ```
 
 ## Requirements
@@ -27,7 +27,7 @@ barb.py -D <name of the surveys> -c <number of cpus> -s <name of npz file>
 * numpy
 * matplotlib
 * tqdm
-* scipy
+* emcee
 
 ## Citations
 Please site the following papers if you use barb. <br />
