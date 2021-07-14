@@ -7,8 +7,13 @@ matplotlib.use("Agg")
 
 
 def check_likelihood(bb, lk, save=False):
-    # in the mcmc you maximize the likelihood, this is to check if the 
-    # functions are working
+    """
+    Checks to see if the functions are working
+
+    Args:
+        bb (float): returns numbers spaced evenly w.r.t interval. Similar to a range but instead of step it uses sample number
+        lk (np.ndarray[float]): runs log likelihood function for all instances of b in bb
+    """
     plt.plot(bb - 1, -1 * np.array(lk))
     plt.yscale("log")
     if save == True:
@@ -18,6 +23,19 @@ def check_likelihood(bb, lk, save=False):
 
 
 def make_hist(data, save=False, output_name="hist_MCMC"):
+    """
+    Checks to see if the functions are working
+
+    Args:
+        data ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
+            nFRBs: number of FRBs detected
+            FWHM_2: full width at half-maximum divided by two
+            R: telescope radius 
+            beams: number of telescope beams
+            tpb: time per beam
+            flux: flux measurement of the FRB
+        output_name (str): name of output image
+    """
     plt.hist(data)
     if save == True:
         plt.savefig(output_name)
@@ -25,6 +43,19 @@ def make_hist(data, save=False, output_name="hist_MCMC"):
 
 
 def make_corner(allsamples, figname="rates_mc.png", save=False):
+    """
+    Makes corner plot
+
+    Args:
+        data ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
+            nFRBs: number of FRBs detected
+            FWHM_2: full width at half-maximum divided by two
+            R: telescope radius 
+            beams: number of telescope beams
+            tpb: time per beam
+            flux: flux measurement of the FRB
+        figname (str): name of the output plot
+    """
     labels = [r"$\log \mathcal{R}$", r"$\alpha$"]
 
     quantile_val = 0.99
