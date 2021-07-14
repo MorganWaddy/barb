@@ -13,6 +13,29 @@ def sampling(
     p0, vargroup, cpu_num, nwalkers, ndim, filename="MCMC_results.h5", 
     max_n=100000
     ):
+    """
+    MCMC sampler
+
+    Args:
+        p0 (float): a uniform random distribution mimicking the distribution of the data
+        vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
+            nFRBs: number of FRBs detected
+            FWHM_2: full width at half-maximum divided by two
+            R: telescope radius 
+            beams: number of telescope beams
+            tpb: time per beam
+            flux: flux measurement of the FRB
+        cpu_num (float): number of cpus
+        nwalkers (float):walkers are copies of a system evolving towards a minimum
+        ndim (float): number of dimensions to the analysis
+        filename (str): name of the output h5 file
+        max_n (float): maximum number of iterations the MCMC sampler can run
+    
+
+    Returns:
+        old_tau (np.ndarray[float]): variable to test convergence
+
+    """
     backend = emcee.backends.HDFBackend(filename)
     backend.reset(nwalkers, ndim)
     nFRBs, FWHM_2, R, beams, tpb, flux = vargroup
@@ -55,13 +78,19 @@ def sampling(
 
 
 def read_samples(filename):
+    """
+    Analyzes output file to compute the samples from the MCMC sampler
+
+    Args:
+        filename (str): name of h5 output file
+
+    Returns:
+        samples (np.ndarray[float]): stored chain of MCMC samples
+
+    """
     reader = emcee.backends.HDFBackend(filename)
     tau = reader.get_autocorr_time()
     # computes an estimate of the autocorrelation time for each parameter
-#    if np.isnan(tau).any():
-#        burnin = 100
-#        thin = 1
-#    else:
     burnin = int(2 * np.max(tau))
     # steps that should be discarded
     thin = int(0.5 * np.min(tau))
@@ -76,6 +105,16 @@ def read_samples(filename):
 
 
 def convert_params(samples):
+    """
+    Converts MCMC samples for the corner plot
+
+    Args:
+        samples (np.ndarray[float]): stored chain of MCMC samples
+
+    Returns:
+        all_samples (np.ndarray[float]): converted chain of MCMC samples
+
+    """
     all_samples = samples
     # an array of the stored chain of MCMC samples
     all_samples[:, 0] = np.log10(
