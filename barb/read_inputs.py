@@ -5,7 +5,7 @@ import logging
 
 def read_in(jsons):
     # data feed in structure
-        """
+    """
     Reads data from the command line
 
     Args:
@@ -14,7 +14,7 @@ def read_in(jsons):
     Returns:
         nFRBs ([float]): number of FRBs detected
         FWHM_2 ([float]): full width at half-maximum divided by two
-        R ([float]): telescope radius 
+        R ([float]): telescope radius
         beams ([float]): number of telescope beams
         tpb ([float]): time per beam
         flux ([float]): flux measurement of the FRB
@@ -46,7 +46,5 @@ def read_in(jsons):
                     tpb = np.append(tpb, p["tpb"])
                     flux = np.append(flux, p["flux"])
     else:
-        logging.info(
-            "No data was supplied, please supply data on the command line!"
-            )
+        logging.info("No data was supplied, please supply data on the command line!")
     return nFRBs, FWHM_2, R, beams, tpb, flux

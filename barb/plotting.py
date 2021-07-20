@@ -30,7 +30,7 @@ def make_hist(data, save=False, output_name="hist_MCMC"):
         data ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
             nFRBs: number of FRBs detected
             FWHM_2: full width at half-maximum divided by two
-            R: telescope radius 
+            R: telescope radius
             beams: number of telescope beams
             tpb: time per beam
             flux: flux measurement of the FRB
@@ -50,7 +50,7 @@ def make_corner(allsamples, figname="rates_mc.png", save=False):
         data ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
             nFRBs: number of FRBs detected
             FWHM_2: full width at half-maximum divided by two
-            R: telescope radius 
+            R: telescope radius
             beams: number of telescope beams
             tpb: time per beam
             flux: flux measurement of the FRB

@@ -20,43 +20,43 @@ def area(R, gamma):
 
 def power_integral(FWHM_2, beta):
     # references the cummulative rate for observed fluxes > 0 (from paper)
-        """
-        Calculates the integral of [sensitivity^(beta)]d(sensitivity)
+    """
+    Calculates the integral of [sensitivity^(beta)]d(sensitivity)
 
-        Args:
-            FWHM_2 (float): Full width at half-maximum divided by two (sensitivty, measured in janskys)
-            beta (float): Euclidean scaling (gamma +1)
+    Args:
+        FWHM_2 (float): Full width at half-maximum divided by two (sensitivty, measured in janskys)
+        beta (float): Euclidean scaling (gamma +1)
 
-        Returns:
-            (FWHM_2 ** -(beta - 1)) / (beta - 1) (float)
+    Returns:
+        (FWHM_2 ** -(beta - 1)) / (beta - 1) (float)
 
     """
     return (FWHM_2 ** -(beta - 1)) / (beta - 1)
 
 
 def likelihood_list(vargroup, alpha, beta):
-        """
-        Analyzes all available data to return the likelihood that there will be an FRB
+    """
+    Analyzes all available data to return the likelihood that there will be an FRB
 
-        Args:
-            vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
-                nFRBs: number of FRBs detected
-                FWHM_2: full width at half-maximum divided by two
-                R: telescope radius 
-                beams: number of telescope beams
-                tpb: time per beam
-                flux: flux measurement of the FRB
-            alpha (float): product of reference rate and gamma
-            beta (float): Euclidean scaling (gamma +1)
+    Args:
+        vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
+            nFRBs: number of FRBs detected
+            FWHM_2: full width at half-maximum divided by two
+            R: telescope radius
+            beams: number of telescope beams
+            tpb: time per beam
+            flux: flux measurement of the FRB
+        alpha (float): product of reference rate and gamma
+        beta (float): Euclidean scaling (gamma +1)
 
-        Returns:
-            likelihood_list (np.ndarray[float]): list of likelihoods that there will be an FRB
+    Returns:
+        likelihood_list (np.ndarray[float]): list of likelihoods that there will be an FRB
 
     """
     nFRBs, FWHM_2, R, beams, tpb, flux = vargroup
     A = area(R, beta - 1)
     I = power_integral(FWHM_2, beta)
-    time = tpb*beams
+    time = tpb * beams
     taa = time * A * alpha
     ll = 0
     for idx, nburst in enumerate(nFRBs):
@@ -71,6 +71,7 @@ def likelihood_list(vargroup, alpha, beta):
             )
         ll += val
     return ll
+
 
 def log_ll(varrest, nFRBs, FWHM_2, R, beams, tpb, flux):
     alpha, beta = varrest
