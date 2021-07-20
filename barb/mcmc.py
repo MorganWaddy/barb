@@ -10,9 +10,8 @@ import logging
 
 
 def sampling(
-    p0, vargroup, cpu_num, nwalkers, ndim, filename="MCMC_results.h5", 
-    max_n=100000
-    ):
+    p0, vargroup, cpu_num, nwalkers, ndim, filename="MCMC_results.h5", max_n=100000
+):
     """
     MCMC sampler
 
@@ -21,7 +20,7 @@ def sampling(
         vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
             nFRBs: number of FRBs detected
             FWHM_2: full width at half-maximum divided by two
-            R: telescope radius 
+            R: telescope radius
             beams: number of telescope beams
             tpb: time per beam
             flux: flux measurement of the FRB
@@ -30,7 +29,7 @@ def sampling(
         ndim (float): number of dimensions to the analysis
         filename (str): name of the output h5 file
         max_n (float): maximum number of iterations the MCMC sampler can run
-    
+
 
     Returns:
         old_tau (np.ndarray[float]): variable to test convergence
@@ -43,8 +42,8 @@ def sampling(
     # pool paralelizes the execution of the functions over the cpus
     pool = Pool(ncpu)
     sampler = emcee.EnsembleSampler(
-        nwalkers, ndim, log_ll, args = (vargroup), pool=pool, backend=backend
-        )
+        nwalkers, ndim, log_ll, args=(vargroup), pool=pool, backend=backend
+    )
     max_n = max_n
 
     # tracking how the average autocorrelation time estimate changes
@@ -55,18 +54,18 @@ def sampling(
     old_tau = np.inf
 
     # sample for up to max_n steps
-    # this function samples until it converges at a estimate of 
+    # this function samples until it converges at a estimate of
     # rate for the events
     for sample in sampler.sample(p0, iterations=max_n, progress=True):
         # only check convergence every 100 steps
         if sampler.iteration % 100:
             continue
-        
+
         # compute the autocorrelation time so far
         tau = sampler.get_autocorr_time(tol=0)
         autocorr[index] = np.mean(tau)
         index += 1
-        
+
         # check convergence
         converged = np.all(tau * 100 < sampler.iteration)
         converged &= np.all(np.abs(old_tau - tau) / tau < 0.01)

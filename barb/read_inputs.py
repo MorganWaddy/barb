@@ -4,6 +4,24 @@ import logging
 
 
 def read_in(jsons):
+<<<<<<< HEAD
+=======
+    # data feed in structure
+    """
+    Reads data from the command line
+
+    Args:
+        jsons ([str]): input data from json files
+
+    Returns:
+        nFRBs ([float]): number of FRBs detected
+        FWHM_2 ([float]): full width at half-maximum divided by two
+        R ([float]): telescope radius
+        beams ([float]): number of telescope beams
+        tpb ([float]): time per beam
+        flux ([float]): flux measurement of the FRB
+
+>>>>>>> e3725a7035dfba5e2187ccaf7d1879858b4370e9
     """
 	Reads data from the command line
 	
