@@ -4,7 +4,6 @@ import logging
 
 
 def read_in(jsons):
-    # data feed in structure
     """
     Reads data from the command line
 
@@ -18,7 +17,6 @@ def read_in(jsons):
         beams ([float]): number of telescope beams
         tpb ([float]): time per beam
         flux ([float]): flux measurement of the FRB
-
     """
     j = len(jsons)
     k = j + 1

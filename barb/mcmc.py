@@ -20,7 +20,7 @@ def sampling(
         vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
             nFRBs: number of FRBs detected
             FWHM_2: full width at half-maximum divided by two
-            R: telescope radius
+            R: telescope radius 
             beams: number of telescope beams
             tpb: time per beam
             flux: flux measurement of the FRB
@@ -29,7 +29,7 @@ def sampling(
         ndim (float): number of dimensions to the analysis
         filename (str): name of the output h5 file
         max_n (float): maximum number of iterations the MCMC sampler can run
-
+    
 
     Returns:
         old_tau (np.ndarray[float]): variable to test convergence
