@@ -30,5 +30,5 @@ bin/run_analysis.py -D <name of the surveys> -c <number of cpus> -r <name of h5 
 * emcee
 
 ## Citations
-Please site the following papers if you use barb. <br />
+Please cite the following papers if you use barb. <br />
 [Lawrence et al. (2017)](https://iopscience.iop.org/article/10.3847/1538-3881/aa844e/pdf)
