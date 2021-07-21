@@ -4,6 +4,7 @@ import glob
 import argparse
 import logging
 import sys
+import os
 sys.path.append('.')
 sys.path.append('../barb/')
 sys.path.append('../')
@@ -14,6 +15,7 @@ from barb.plotting import make_corner
 from barb.likelihood import likelihood_list, log_ll
 from barb.mcmc import sampling, convert_params, read_samples
 
+os.environ["HDF5_USE_FILE_LOCKING"] = "FALSE"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
