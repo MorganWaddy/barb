@@ -1,6 +1,7 @@
 import pytest
 import numpy as np
 
+
 def area(R, gamma):
     # beam shape
     # gamma is Euclidean scaling that is valid for any population with a fixed

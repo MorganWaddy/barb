@@ -20,7 +20,7 @@ def read_in(jsons):
     """
     j = len(jsons)
     k = j + 1
-    filename = jsons
+    filename = np.sort(jsons)
 
     if j > 0:
         surveys = []
