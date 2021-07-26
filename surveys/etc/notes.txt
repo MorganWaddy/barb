@@ -1,8 +1,0 @@
-My current pipeline:
-
-> touch Name_Year_Rate-Data.json
-> cp Template_Year_Rate-Data.json Name_Year_Rate-Data.json
-     # Template file is a file with an empty dictionary that is formatted to
-     # to be read as a json file
-> emacs Name_Year_Rate-Data.json &
-     # I then insert all the values, and move on to the next
