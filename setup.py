@@ -21,7 +21,7 @@ setup(
     license="",
     long_description=long_description,
     description="Bayesian Rate Estimation for FRBs",
-    install_requires=["astropy", "numpy", "matplotlib", "tqdm", "scipy", "emcee", "corner"],
+    install_requires=["astropy", "numpy", "matplotlib", "tqdm", "scipy", "emcee", "corner", "h5py"],
     python_requires=">=3.6",
     classifiers=[
         "Programming Language :: Python",
