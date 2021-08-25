@@ -1,6 +1,6 @@
 import glob
 import re
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as f:
     long_description = f.read()
@@ -13,10 +13,10 @@ version = re.search(r"^_*version_* = ['\"]([^'\"]*)['\"]", vf, re.M).group(1)
 setup(
     name="barb",
     version=version,
-    packages=["barb"],
+    packages=find_packages(),
     url="https://github.com/MorganWaddy/barb",
     author="Morgan Waddy",
-    scripts=glob.glob("bin/*"),
+    scripts=glob.glob("bin/*py"),
     author_email="mdw4ux@virginia.edu",
     license="",
     long_description=long_description,

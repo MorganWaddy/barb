@@ -8,7 +8,6 @@ import os
 
 from barb.read_inputs import read_in
 from barb.plotting import make_corner
-from barb.likelihood import likelihood_list, log_ll
 from barb.mcmc import sampling, convert_params, read_samples
 
 os.environ["HDF5_USE_FILE_LOCKING"] = "FALSE"

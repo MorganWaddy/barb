@@ -13,7 +13,6 @@ def area(R, gamma):
         ar (float): shape of the beam
     """
     ar = (np.pi * R ** 2) / (gamma * np.log(2))
-    beta = gamma + 1
     return ar
 
 
