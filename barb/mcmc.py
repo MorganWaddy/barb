@@ -41,6 +41,9 @@ def sampling(
     ncpu = cpu_num
     # pool paralelizes the execution of the functions over the cpus
     pool = Pool(ncpu)
+
+    logging.info(f'Value of likelihood at: np.log10(15), 2.5 is: {log_ll((np.log10(15), 2.5), nFRBs, FWHM_2, R, beams, tpb, flux)}')
+
     sampler = emcee.EnsembleSampler(
         nwalkers, ndim, log_ll, args=(vargroup), pool=pool, backend=backend
     )

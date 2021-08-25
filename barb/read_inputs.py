@@ -42,7 +42,7 @@ def read_in(jsons):
                     R = np.append(R, p["R"])
                     beams = np.append(beams, p["beams"])
                     tpb = np.append(tpb, p["tpb"])
-                    flux = np.append(flux, p["flux"])
+                    flux.append(p["flux"])
     else:
         logging.info("No data was supplied, please supply data on the command line!")
     return nFRBs, FWHM_2, R, beams, tpb, flux
