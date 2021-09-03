@@ -27,9 +27,9 @@ def make_hist(data, save=False, output_name="hist_MCMC"):
     Checks to see if the functions are working
 
     Args:
-        data ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
+        data ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, sensitivity, R, beams, tpb, flux
             nFRBs: number of FRBs detected
-            FWHM_2: full width at half-maximum divided by two
+            sensitivity: sensitivity at FWHM divided by 2 (measured in janskys)
             R: telescope radius
             beams: number of telescope beams
             tpb: time per beam
@@ -47,9 +47,9 @@ def make_corner(allsamples, figname="rates_mc.png", save=False):
     Makes corner plot
 
     Args:
-        data ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
+        data ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, sensitivity, R, beams, tpb, flux
             nFRBs: number of FRBs detected
-            FWHM_2: full width at half-maximum divided by two
+            sensitivity: sensitivity at FWHM divided by 2 (measured in janskys)
             R: telescope radius
             beams: number of telescope beams
             tpb: time per beam
