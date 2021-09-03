@@ -16,18 +16,18 @@ def area(R, gamma):
     return ar
 
 
-def power_integral(FWHM_2, beta):
+def power_integral(sensitivity, beta):
     """
     Calculates the integral of [sensitivity^(beta)]d(sensitivity)
 
     Args:
-        FWHM_2 (float): Full width at half-maximum divided by two (sensitivty, measured in janskys)
+        sensitivity (float): sensitivity at FWHM divided by 2 (measured in janskys)
         beta (float): Euclidean scaling (gamma +1)
 
     Returns:
-        (FWHM_2 ** -(beta - 1)) / (beta - 1) (float)
+        (sensitivity ** -(beta - 1)) / (beta - 1) (float)
     """
-    return (FWHM_2 ** -(beta - 1)) / (beta - 1)
+    return (sensitivity ** -(beta - 1)) / (beta - 1)
 
 
 def likelihood_list(vargroup, alpha, beta):
@@ -35,9 +35,9 @@ def likelihood_list(vargroup, alpha, beta):
     Analyzes all available data to return the likelihood that there will be an FRB
 
     Args:
-        vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
+        vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, sensitivity, R, beams, tpb, flux
             nFRBs: number of FRBs detected
-            FWHM_2: full width at half-maximum divided by two
+            sensitivity: sensitivity at FWHM divided by 2 (measured in janskys)
             R: telescope radius
             beams: number of telescope beams
             tpb: time per beam
@@ -48,9 +48,9 @@ def likelihood_list(vargroup, alpha, beta):
     Returns:
         likelihood_list (np.ndarray[float]): list of likelihoods that there will be an FRB
     """
-    nFRBs, FWHM_2, R, beams, tpb, flux = vargroup
+    nFRBs, sensitivity, R, beams, tpb, flux = vargroup
     A = area(R, beta - 1)
-    I = power_integral(FWHM_2, beta)
+    I = power_integral(sensitivity, beta)
     time = tpb * beams
     taa = time * A * alpha
     ll = 0
@@ -68,13 +68,13 @@ def likelihood_list(vargroup, alpha, beta):
     return ll
 
 
-def log_ll(varrest, nFRBs, FWHM_2, R, beams, tpb, flux):
+def log_ll(varrest, nFRBs, sensitivity, R, beams, tpb, flux):
     """
     Calculates the log of the result from likelihood_list
 
     Args:
         nFRBs: number of FRBs detected
-        FWHM_2: full width at half-maximum divided by two
+        sensitivity: sensitivity at FWHM divided by 2 (measured in janskys)
         R: telescope radius
         beams: number of telescope beams
         tpb: time per beam
@@ -88,7 +88,7 @@ def log_ll(varrest, nFRBs, FWHM_2, R, beams, tpb, flux):
     """
     alpha, beta = varrest
     alpha = 10 ** alpha
-    vargroup = nFRBs, FWHM_2, R, beams, tpb, flux
+    vargroup = nFRBs, sensitivity, R, beams, tpb, flux
     if beta < 1:
         return -np.inf
         # returns a positive infinity multiplied by -1
