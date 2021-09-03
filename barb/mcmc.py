@@ -17,9 +17,9 @@ def sampling(
 
     Args:
         p0 (float): a uniform random distribution mimicking the distribution of the data
-        vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, FWHM_2, R, beams, tpb, flux
+        vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, sensitivity, R, beams, tpb, flux
             nFRBs: number of FRBs detected
-            FWHM_2: full width at half-maximum divided by two
+            sensitivity: sensitivity at FWHM divided by 2 (measured in janskys)
             R: telescope radius
             beams: number of telescope beams
             tpb: time per beam
@@ -37,12 +37,12 @@ def sampling(
     """
     backend = emcee.backends.HDFBackend(filename)
     backend.reset(nwalkers, ndim)
-    nFRBs, FWHM_2, R, beams, tpb, flux = vargroup
+    nFRBs, sensitivity, R, beams, tpb, flux = vargroup
     ncpu = cpu_num
     # pool paralelizes the execution of the functions over the cpus
     pool = Pool(ncpu)
 
-    logging.info(f'Value of likelihood at: np.log10(15), 2.5 is: {log_ll((np.log10(15), 2.5), nFRBs, FWHM_2, R, beams, tpb, flux)}')
+    logging.info(f'Value of likelihood at: np.log10(15), 2.5 is: {log_ll((np.log10(15), 2.5), nFRBs, sensitivity, R, beams, tpb, flux)}')
 
     sampler = emcee.EnsembleSampler(
         nwalkers, ndim, log_ll, args=(vargroup), pool=pool, backend=backend
