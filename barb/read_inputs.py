@@ -12,7 +12,7 @@ def read_in(jsons):
 
     Returns:
         nFRBs ([float]): number of FRBs detected
-        FWHM_2 ([float]): full width at half-maximum divided by two
+        sensitivity ([float]): sensitivity at FWHM divided by 2
         R ([float]): telescope radius
         beams ([float]): number of telescope beams
         tpb ([float]): time per beam
@@ -25,7 +25,7 @@ def read_in(jsons):
     if j > 0:
         surveys = []
         nFRBs = []
-        FWHM_2 = []
+        sensitivity = []
         R = []
         beams = []
         tpb = []
@@ -38,11 +38,11 @@ def read_in(jsons):
                 for p in info["properties"]:
                     surveys.append(p["surveys"])
                     nFRBs = np.append(nFRBs, p["nFRBs"])
-                    FWHM_2 = np.append(FWHM_2, p["FWHM_2"])
+                    sensitivity = np.append(FWHM_2, p["FWHM_2"])
                     R = np.append(R, p["R"])
                     beams = np.append(beams, p["beams"])
                     tpb = np.append(tpb, p["tpb"])
                     flux.append(p["flux"])
     else:
         logging.info("No data was supplied, please supply data on the command line!")
-    return nFRBs, FWHM_2, R, beams, tpb, flux
+    return nFRBs, sensitivity, R, beams, tpb, flux
