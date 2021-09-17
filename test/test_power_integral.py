@@ -1,13 +1,8 @@
 import pytest
 import numpy as np
-
-
-def power_integral(FWHM_2, beta):
-    # references the cummulative rate for observed fluxes > 0 (from paper)
-    # this returns the value for the integral of
-    # [sensitivity^(beta)]d(sensitivity)
-    return (FWHM_2 ** -(beta - 1)) / (beta - 1)
-    # FWHM_2 is sigma (sensitivty), measured in janskys
+import sys
+sys.path.insert(0, '../barb/')
+from likelihood import power_integral
 
 
 def test_power_integral():
