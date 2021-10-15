@@ -1,7 +1,8 @@
 import pytest
 import numpy as np
 import sys
-sys.path.insert(0, '../barb/')
+
+sys.path.insert(0, "../barb/")
 from likelihood import power_integral
 
 

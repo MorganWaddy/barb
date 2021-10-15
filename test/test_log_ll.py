@@ -1,13 +1,15 @@
 import pytest
 import numpy as np
-from test_area import area
-from test_power_integral import power_integral
-from test_likelihood_list import likelihood_list
 import sys
-sys.path.insert(0, '../barb/')
+
+sys.path.insert(0, "../barb/")
+from likelihood import area
+from likelihood import power_integral
+from likelihood import likelihood_list
 from likelihood import log_ll
 
 vargroup = [4], 12, 5, 13, [6], [9]
+
 
 def test_log_likelihood_list():
     idx = 0
