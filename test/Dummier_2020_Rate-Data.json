@@ -1,7 +1,7 @@
 { "properties": [{
 	"surveys": "Dummier 2020",
-	"n": 2,
-	"S": 0.24,
+	"nFRBs": 2,
+	"sensitivity": 0.24,
 	"R": 0.1,
 	"beams": 2,
 	"tpb": 524,
