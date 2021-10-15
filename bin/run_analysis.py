@@ -66,7 +66,7 @@ Surveys on the original data set: Agarwal 2019, Masui 2015, Men 2019, Bhandari 2
     logging.info("Input Arguments:-")
     for arg, value in sorted(vars(args).items()):
         logging.info("%s: %r", arg, value)
-    
+
     files = args.dat
     max_n = int(args.max_n)
     cornername = "{}".format(args.cornername)
