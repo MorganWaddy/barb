@@ -4,7 +4,7 @@ from test_area import area
 from test_power_integral import power_integral
 import sys
 
-sys.path.insert(0, "../barb/")
+# sys.path.insert(0, "../barb/")
 from likelihood import likelihood_list
 
 vargroup = [4], 12, 5, 13, [6], [9]
