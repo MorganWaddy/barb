@@ -3,8 +3,8 @@ import json
 import logging
 import sys
 
-sys.path.insert(0, "../barb/")
-from read_inputs import read_in
+# sys.path.insert(0, "../barb/")
+from barb.read_inputs import read_in
 
 files = ["Dummier_2020_Rate-Data.json", "Dummy_2020_Rate-Data.json"]
 vargroup = (
