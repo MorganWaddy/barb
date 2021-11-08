@@ -2,8 +2,8 @@ import pytest
 import numpy as np
 import sys
 
-sys.path.insert(0, "../barb/")
-from likelihood import area
+# sys.path.insert(0, "../barb/")
+from barb.likelihood import area
 
 
 def test_area():
