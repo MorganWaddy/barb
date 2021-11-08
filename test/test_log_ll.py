@@ -2,11 +2,11 @@ import pytest
 import numpy as np
 import sys
 
-sys.path.insert(0, "../barb/")
-from likelihood import area
-from likelihood import power_integral
-from likelihood import likelihood_list
-from likelihood import log_ll
+# sys.path.insert(0, "../barb/")
+from barb.likelihood import area
+from barb.likelihood import power_integral
+from barb.likelihood import likelihood_list
+from barb.likelihood import log_ll
 
 vargroup = [4], 12, 5, 13, [6], [9]
 
