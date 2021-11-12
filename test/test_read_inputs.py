@@ -3,7 +3,10 @@ import json
 import logging
 from barb.read_inputs import read_in
 
-jsons = ["Dummier_2020_Rate-Data.json", "Dummy_2020_Rate-Data.json"]
+jsons = [
+    "~/FRB-rate/barb/test/Dummier_2020_Rate-Data.json",
+    "~/FRB-rate/barb/test/Dummy_2020_Rate-Data.json",
+]
 vargroup = (
     [2, 4],
     [0.24, 0.45],
