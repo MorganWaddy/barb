@@ -4,8 +4,8 @@ import logging
 from barb.read_inputs import read_in
 
 jsons = [
-    "~/FRB-rate/barb/test/Dummier_2020_Rate-Data.json",
-    "~/FRB-rate/barb/test/Dummy_2020_Rate-Data.json",
+    "/home/mwaddy/FRB-rate/barb/test/Dummier_2020_Rate-Data.json",
+    "/home/mwaddy/FRB-rate/barb/test/Dummy_2020_Rate-Data.json",
 ]
 vargroup = (
     [2, 4],
@@ -18,4 +18,4 @@ vargroup = (
 
 
 def test_read_in():
-    assert read_in(jsons) == vargroup
+    assert read_in(jsons) == np.all(vargroup)
