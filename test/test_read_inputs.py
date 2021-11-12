@@ -19,4 +19,4 @@ vargroup = nFRBs, sensitivity, R, beams, tpb, flux
 
 
 def test_read_in():
-    assert read_in(files) == vargroup
+    assert read_in(jsons) == vargroup
