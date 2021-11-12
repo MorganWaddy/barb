@@ -14,7 +14,7 @@ jsons = ["Dummier_2020_Rate-Data.json", "Dummy_2020_Rate-Data.json"]
 #    [2, 3],
 #    [524, 568],
 #    [[4.2, 57.8, 10.2, 7.5], [7.2, 53.8, 9.2, 3.5]],
-#)
+# )
 vargroup = nFRBs, sensitivity, R, beams, tpb, flux
 
 
