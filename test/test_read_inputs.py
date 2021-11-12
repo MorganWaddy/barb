@@ -15,5 +15,5 @@ jsons = ["Dummier_2020_Rate-Data.json", "Dummy_2020_Rate-Data.json"]
 
 
 def test_read_in():
-    vargroup = nFRBs, sensitivity, R, beams, tpb, flux
+    nFRBs, sensitivity, R, beams, tpb, flux = vargroup
     assert read_in(jsons) == vargroup
