@@ -1,9 +1,6 @@
 import numpy as np
 import json
 import logging
-import sys
-
-# sys.path.insert(0, "../barb/")
 from barb.read_inputs import read_in
 
 jsons = ["Dummier_2020_Rate-Data.json", "Dummy_2020_Rate-Data.json"]
@@ -15,8 +12,8 @@ jsons = ["Dummier_2020_Rate-Data.json", "Dummy_2020_Rate-Data.json"]
 #    [524, 568],
 #    [[4.2, 57.8, 10.2, 7.5], [7.2, 53.8, 9.2, 3.5]],
 # )
-vargroup = nFRBs, sensitivity, R, beams, tpb, flux
 
 
 def test_read_in():
+    vargroup = nFRBs, sensitivity, R, beams, tpb, flux
     assert read_in(jsons) == vargroup
