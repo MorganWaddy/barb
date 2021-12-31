@@ -12,6 +12,6 @@ vargroup = np.array(vargroup)
 
 def test_likelihood_list():
     idx = 0
-    nburst = 0
+    nburst = 1
     ll = likelihood_list(vargroup, 3, 7)
     assert ll == -8.213534499339293
