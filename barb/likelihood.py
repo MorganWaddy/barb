@@ -52,7 +52,13 @@ def likelihood_list(vargroup, alpha, beta):
     A = area(R, beta - 1)
     I = power_integral(sensitivity, beta)
     time = tpb * beams
+    print(type(time))
+    print(type(A))
+    print(type(alpha))
     taa = time * A * alpha
+    taa = np.array(taa)
+    I = np.array(I)
+    flux = np.array(flux)
     ll = 0
     for idx, nburst in enumerate(nFRBs):
         # idx is just a number that identifies a place in the array
