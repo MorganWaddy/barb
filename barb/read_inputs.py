@@ -38,7 +38,7 @@ def read_in(jsons):
                 for p in info["properties"]:
                     surveys.append(p["surveys"])
                     nFRBs = np.append(nFRBs, p["nFRBs"])
-                    sensitivity = np.append(FWHM_2, p["FWHM_2"])
+                    sensitivity = np.append(sensitivity, p["FWHM_2"])
                     R = np.append(R, p["R"])
                     beams = np.append(beams, p["beams"])
                     tpb = np.append(tpb, p["tpb"])
