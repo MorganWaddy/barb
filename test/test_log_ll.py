@@ -12,5 +12,5 @@ vargroup = np.array(vargroup)
 
 def test_log_likelihood_list():
     idx = 0
-    nburst = 0
+    nburst = 1
     assert log_ll([3, 7], [4], 12, 5, 13, np.array([6]), [9]) == -1.3369332333190052
