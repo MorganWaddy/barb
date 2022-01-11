@@ -14,7 +14,7 @@ vargroup = (
     np.array([6]),
     [np.int(9)],
 )
-vargroup = np.array(vargroup, "dtype=object")
+vargroup = np.array(vargroup, dtype=object)
 
 
 def test_likelihood_list():
