@@ -12,7 +12,7 @@ vargroup = (
     np.int64(5),
     np.int64(13),
     np.array([6]),
-    [np.int(9)],
+    [np.int64(9)],
 )
 vargroup = np.array(vargroup, dtype=object)
 
