@@ -15,7 +15,7 @@ vargroup = [
     [524, 568],
     [[4.2, 57.8, 10.2, 7.5], [7.2, 53.8, 9.2, 3.5]],
 ]
-vargroup = np.array(vargroup)
+vargroup = np.array(vargroup, "dtype=object")
 
 
 def test_read_in():

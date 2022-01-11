@@ -8,7 +8,7 @@ from barb.likelihood import likelihood_list
 from barb.likelihood import log_ll
 
 vargroup = [4], 12, 5, 13, np.array([6]), [9]
-vargroup = np.array(vargroup)
+vargroup = np.array(vargroup, "dtype=object")
 
 
 def test_log_likelihood_list():
