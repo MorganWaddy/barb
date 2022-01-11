@@ -10,6 +10,7 @@ from barb.likelihood import log_ll
 vargroup = [4], 12, 5, 13, np.array([6]), [9]
 vargroup = np.array(vargroup)
 
+
 def test_log_likelihood_list():
     idx = 0
     nburst = 1
