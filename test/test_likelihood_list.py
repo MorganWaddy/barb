@@ -7,12 +7,12 @@ import sys
 from barb.likelihood import likelihood_list
 
 vargroup = (
-    [np.int64(4)],
-    np.int64(12),
-    np.int64(5),
-    np.int64(13),
+    [4],
+    12,
+    5,
+    13,
     np.array([6]),
-    [np.int64(9)],
+    [9],
 )
 vargroup = np.array(vargroup, dtype=object)
 
