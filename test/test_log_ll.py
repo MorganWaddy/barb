@@ -16,6 +16,7 @@ vargroup = (
 )
 vargroup = np.array(vargroup, dtype=object)
 
+
 def likelihood_list(vargroup, alpha, beta):
     """
     Analyzes all available data to return the likelihood that there will be an FRB
@@ -55,6 +56,7 @@ def likelihood_list(vargroup, alpha, beta):
         ll += val
     return ll
 
+
 def log_ll(varrest, nFRBs, sensitivity, R, beams, tpb, flux):
     """
     Calculates the log of the result from likelihood_list
@@ -82,7 +84,11 @@ def log_ll(varrest, nFRBs, sensitivity, R, beams, tpb, flux):
         # (np.inf is a floating point constant value in the numpy library)
     return likelihood_list(vargroup, alpha=alpha, beta=beta)
 
+
 def test_log_likelihood_list():
     idx = 0
     nburst = 1
-    assert log_ll([3, 7], [4], 12, 5, 13, np.array([6,6,6,6]), [9,9,9,9]) == 41.348502624892795
+    assert (
+        log_ll([3, 7], [4], 12, 5, 13, np.array([6, 6, 6, 6]), [9, 9, 9, 9])
+        == 41.348502624892795
+    )
