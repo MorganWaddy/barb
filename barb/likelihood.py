@@ -59,10 +59,10 @@ def likelihood_list(vargroup, alpha, beta):
     for idx, nburst in enumerate(nFRBs):
         # idx is just a number that identifies a place in the array
         if flux[idx] == [-1]:
-            val = -taa[idx] * I
+            val = -taa[idx] * I[idx]
         else:
             val = (
-                -taa[idx] * I
+                -taa[idx] * I[idx]
                 + nburst * np.log(taa[idx])
                 - beta * np.sum(np.log(flux[idx]))
             )
