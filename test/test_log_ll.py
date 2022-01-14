@@ -4,7 +4,6 @@ import sys
 
 from barb.likelihood import area
 from barb.likelihood import power_integral
-from barb.likelihood import likelihood_list
 from barb.likelihood import log_ll
 
 vargroup = (
