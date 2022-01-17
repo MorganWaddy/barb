@@ -10,7 +10,7 @@ import logging
 from barb.likelihood import area
 from barb.likelihood import power_integral
 from test_likelihood_list import likelihood_list
-from test_likelihood_list import log_ll
+from test_log_ll import log_ll
 from barb.mcmc import sampling
 
 vargroup = (
@@ -31,7 +31,7 @@ max_n=10
 
 def test_sampling():
     old_tau = sampling(
-        p0, varrgroup, cpu_num, nwalkers, ndim, filename=h5name, max_n=max_n
+        p0, vargroup, cpu_num, nwalkers, ndim, filename=h5name, max_n=max_n
     )
     assert old_tau ==
 
