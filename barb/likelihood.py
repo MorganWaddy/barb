@@ -56,17 +56,30 @@ def likelihood_list(vargroup, alpha, beta):
     taa = np.array(taa)
     flux = np.array(flux)
     ll = 0
-    for idx, nburst in enumerate(nFRBs):
+    if type(I) == float or np.shape(I) == ():
+        for idx, nburst in enumerate(nFRBs):
         # idx is just a number that identifies a place in the array
-        if flux[idx] == [-1]:
-            val = -taa[idx] * I[idx]
-        else:
-            val = (
-                -taa[idx] * I[idx]
-                + nburst * np.log(taa[idx])
-                - beta * np.sum(np.log(flux[idx]))
-            )
-        ll += val
+            if flux[idx] == [-1]:
+                val = -taa[idx] * I
+            else:
+                val = (
+                    -taa[idx] * I
+                    + nburst * np.log(taa[idx])
+                    - beta * np.sum(np.log(flux[idx]))
+                )
+            ll += val
+    else:
+        for idx, nburst in enumerate(nFRBs):
+        # idx is just a number that identifies a place in the array
+            if flux[idx] == [-1]:
+                val = -taa[idx] * I[idx]
+            else:
+                val = (
+                    -taa[idx] * I[idx]
+                    + nburst * np.log(taa[idx])
+                    - beta * np.sum(np.log(flux[idx]))
+                )
+            ll += val
     return ll
 
 
