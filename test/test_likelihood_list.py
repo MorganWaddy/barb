@@ -11,8 +11,8 @@ vargroup = (
     12,
     5,
     13,
-    np.array([6, 6, 6, 6]),
-    [9, 9, 9, 9],
+    np.array([6]),
+    [9],
 )
 vargroup = np.array(vargroup, dtype=object)
 
