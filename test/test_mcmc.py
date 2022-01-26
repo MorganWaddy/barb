@@ -9,9 +9,7 @@ import logging
 import os
 
 from barb.likelihood import area, power_integral, likelihood_list, log_ll
-from barb.mcmc import sampling
-from barb.mcmc import convert_params
-from barb.mcmc import read_samples
+from barb.mcmc import sampling, convert_params, read_samples
 
 vargroup = (
     [4],
@@ -40,3 +38,12 @@ def test_sampling():
 def test_read_samples():
     h5name = "test_MCMC_results.h5"
     assert os.path.isfile(h5name)
+
+def test_convert_params():
+    samples = read_samples(h5name)
+    converted_params = convert_params(samples)
+    if not converted_params:
+        test = good
+    else:
+        test = bad
+    assert test == good
