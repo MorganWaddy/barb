@@ -9,7 +9,7 @@ import logging
 import os
 
 from barb.likelihood import area, power_integral, likelihood_list, log_ll
-from barb.mcmc import sampling, read_samples
+from barb.mcmc import sampling, convert_params, read_samples
 
 vargroup = (
     [4],
