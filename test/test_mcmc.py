@@ -6,12 +6,10 @@ from tqdm import tqdm
 import numpy as np
 import json
 import logging
+import os
 
-from barb.likelihood import area
-from barb.likelihood import power_integral
-from barb.likelihood import likelihood_list
-from barb.likelihood import log_ll
-from barb.mcmc import sampling
+from barb.likelihood import area, power_integral, likelihood_list, log_ll
+from barb.mcmc import sampling, read_samples
 
 vargroup = (
     [4],
@@ -35,3 +33,8 @@ def test_sampling():
         p0, vargroup, cpu_num, nwalkers, ndim, filename=h5name, max_n=max_n
     )
     assert old_tau == np.inf
+
+
+def test_read_samples():
+    h5name = "test_MCMC_results.h5"
+    assert os.path.isfile(h5name)
