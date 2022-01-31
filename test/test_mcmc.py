@@ -36,14 +36,19 @@ def test_sampling():
 
 
 def test_read_samples():
-    h5name = "test_MCMC_results.h5"
     assert os.path.isfile(h5name)
 
 def test_convert_params():
-    samples = read_samples(h5name)
+    samples = [[-3.08573175 1.85962243]
+               [-2.95279279 1.86707565]
+               [-3.07843741 1.8282952 ]
+               [-3.1737073 1.77846164]
+               [-3.10455859 1.7959741 ]
+               [-3.03914302 1.81618995]]
     converted_params = convert_params(samples)
     if not converted_params:
         test = good
     else:
         test = bad
     assert test == good
+    
