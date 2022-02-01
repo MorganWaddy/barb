@@ -39,16 +39,20 @@ def test_read_samples():
     assert os.path.isfile(h5name)
 
 def test_convert_params():
-    samples = [[-3.08573175 1.85962243]
-               [-2.95279279 1.86707565]
-               [-3.07843741 1.8282952 ]
-               [-3.1737073 1.77846164]
-               [-3.10455859 1.7959741 ]
-               [-3.03914302 1.81618995]]
-    converted_params = convert_params(samples)
-    if not converted_params:
-        test = good
-    else:
-        test = bad
-    assert test == good
+    samples = [[-3.08573175, 1.85962243],
+               [-2.95279279, 1.86707565],
+               [-3.07843741, 1.8282952 ],
+               [-3.1737073, 1.77846164],
+               [-3.10455859, 1.7959741 ],
+               [-3.03914302, 1.81618995]]
+    converted_params = convert_params(np.array(samples))
+    assert converted_params.any()
+#    for param in converted_params:
+    assert converted_params == pytest.approx(np.array([
+                [2.97562729, 0.85962243],
+                [3.104817  , 0.86707565],
+                [2.99904422, 0.8282952 ],
+                [2.93072226, 0.77846164],
+                [2.99020925, 0.7959741 ],
+                [3.04473252, 0.81618995]]), 0.1)
     
