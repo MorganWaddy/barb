@@ -12,7 +12,7 @@ def area(R, gamma):
     Returns:
         ar (float): shape of the beam
     """
-    ar = (np.pi * R ** 2) / (gamma * np.log(2))
+    ar = (np.pi * R**2) / (gamma * np.log(2))
     return ar
 
 
@@ -102,7 +102,7 @@ def log_ll(varrest, nFRBs, sensitivity, R, beams, tpb, flux):
         log_ll (np.ndarray[float]): log of the list of likelihoods that there will be an FRB
     """
     alpha, beta = varrest
-    alpha = 10 ** alpha
+    alpha = 10**alpha
     vargroup = nFRBs, sensitivity, R, beams, tpb, flux
     if beta < 1:
         return -np.inf
