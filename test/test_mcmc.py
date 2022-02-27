@@ -34,7 +34,7 @@ def test_sampling():
     old_tau = sampling(
         p0, vargroup, cpu_num, nwalkers, ndim, filename=h5name, max_n=max_n
     )
-    assert old_tau.any() == np.inf
+    assert old_tau == np.inf
 
 
 def test_read_samples():
