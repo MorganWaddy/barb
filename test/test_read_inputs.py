@@ -22,7 +22,7 @@ vargroup = np.array(vargroup, dtype=object)
 
 
 def test_read_in():
-    jsons = np.array(read_in(files))
+    jsons = np.array(read_in(files), dtype=object)
     Dummy1 = "Dummier_2020_Rate-Data.json"
     Dummy2 = "Dummy_2020_Rate-Data.json"
     assert os.path.isfile(Dummy1)
