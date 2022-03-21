@@ -13,13 +13,14 @@ from barb.mcmc import sampling, convert_params, read_samples
 from barb.plotting import make_corner
 
 vargroup = (
-    [4],
-    12,
-    5,
-    13,
+    np.array([4]),
+    np.array([12]),
+    np.array([5]),
+    np.array([13]),
     np.array([6]),
-    [9],
+    np.array([9]),
 )
+
 vargroup = np.array(vargroup, dtype=object)
 cpu_num = 1
 ndim, nwalkers = 2, 12
