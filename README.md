@@ -12,7 +12,7 @@ python setup.py install
 ## Usage
 First, create a json file with your relevant data using the json file-maker.
 ```bash
-python auto-json.py -N <name> -Y <year> -n <nFRBs> -S <FWHM_2> -R <radius> -b <beams> -t <tpb> -f <flux>
+python auto-json.py -N <name> -Y <year> -n <nFRBs> -S <sensitivity> -R <radius> -b <beams> -t <tpb> -f <flux>
 ```
 
 Second, group your json file with the json data files. <br />
