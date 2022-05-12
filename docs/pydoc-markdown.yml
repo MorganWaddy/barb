@@ -1,0 +1,36 @@
+loaders:
+  - type: python
+processors:
+  - type: filter
+  - type: smart
+  - type: crossref
+
+renderer:
+  type: mkdocs
+  output_directory: docs/build/
+  markdown:
+    data_code_block: true
+    data_expression_maxlength: 88
+    signature_with_def: true
+    source_linker:
+     type: github
+     repo: barb
+  pages:
+    - title: Home
+      name: index
+      source: README.md
+    - title: barb
+      contents:
+        - "barb.barb.*"
+    - title: barb.likelihood
+      contents:
+        - "barb.likelihood.*"
+    - title: barb.mcmc
+      contents:
+        - "barb.mcmc.*"
+    - title: barb.plotting
+      contents:
+        - "barb.plotting.*"
+    - title: barb.read_inputs
+      contents:
+        - "barb.read_inputs.*"
