@@ -21,7 +21,7 @@ vargroup = (
     np.array([9]),
 )
 
-vargroup = np.array(vargroup, dtype=object)
+
 cpu_num = 1
 ndim, nwalkers = 2, 12
 ivar = np.array([np.log10(15), 2.5])
