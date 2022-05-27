@@ -11,7 +11,7 @@ python setup.py install
 ```
 
 ## Usage
-First, create a json file with your relevant data using the json file-maker.
+First, create a json file with your relevant data using [auto-json](https://github.com/MorganWaddy/auto-json/blob/master/README.md "README.md").
 ```bash
 python bin/auto-json.py -N <name> -Y <year> -n <nFRBs> -S <sensitivity> -R <radius> -b <beams> -t <tpb> -f <flux>
 ```
