@@ -26,6 +26,7 @@ Third, run the program.
 ```bash
 bin/run_analysis.py -D <name of the surveys> -c <number of cpus> -r <name of h5 file> -n <name of final plot> -m <maximum number of iterations>
 ```
+_**For a more in-depth tutorial and explanation of the package's functions, please see the tutorial jupyter notebook.**_
 
 ## Requirements
 * astropy
