@@ -9,15 +9,11 @@ git clone https://github.com/MorganWaddy/barb
 cd barb
 python setup.py install
 ```
-Download the json file creation program.
-```bash
-git clone https://github.com/MorganWaddy/auto-json
-```
 
 ## Usage
 First, create a json file with your relevant data using the json file-maker.
 ```bash
-python auto-json.py -N <name> -Y <year> -n <nFRBs> -S <sensitivity> -R <radius> -b <beams> -t <tpb> -f <flux>
+python bin/auto-json.py -N <name> -Y <year> -n <nFRBs> -S <sensitivity> -R <radius> -b <beams> -t <tpb> -f <flux>
 ```
 
 Second, group your json file(s) with the original dataset, located in the surveys directory. <br />
