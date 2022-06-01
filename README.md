@@ -13,7 +13,7 @@ python setup.py install
 ## Usage
 First, create a json file with your relevant data using [auto-json](https://github.com/MorganWaddy/auto-json/blob/master/README.md "README.md").
 ```bash
-python bin/auto-json.py -N <name> -Y <year> -n <nFRBs> -S <sensitivity> -R <radius> -b <beams> -t <tpb> -f <flux>
+python bin/auto-json.py -N <name of primary author of the paper> -Y <year> -n <nFRBs> -S <sensitivity> -R <radius of the beam> -b <beams> -t <time per beam> -f <flux>
 ```
 
 Second, group your json file(s) with the original dataset, located in the surveys directory. <br />
