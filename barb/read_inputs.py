@@ -13,7 +13,7 @@ def read_in(jsons):
     Returns:
         nFRBs ([float]): number of FRBs detected
         sensitivity ([float]): sensitivity at FWHM divided by 2
-        R ([float]): telescope radius
+        R ([float]): telescope beam radius
         beams ([float]): number of telescope beams
         tpb ([float]): time per beam
         flux ([float]): flux measurement of the FRB
