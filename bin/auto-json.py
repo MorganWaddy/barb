@@ -31,7 +31,7 @@ parser.add_argument(
 parser.add_argument(
     "-R",
     "--radius",
-    help="radius in degrees",
+    help="radius of beam in degrees",
     action="store",
     type=float,
     required=True,
