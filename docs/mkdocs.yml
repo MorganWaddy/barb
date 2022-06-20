@@ -1,7 +1,7 @@
 site_name: Barb Documentation
 site_author: Morgan Waddy
 docs_dir: build/content
-site_description: 'Barb Documentation'
+site_description: "Barb Documentation"
 repo_name: barb
 repo_url: https://github.com/MorganWaddy/barb
 
@@ -12,14 +12,6 @@ theme:
   palette:
     primary: pink
     accent: green
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate 
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
   features:
     - search.highlight
 
@@ -27,11 +19,11 @@ nav:
   - Getting Started: index.md
   - Tutorial: tutorial.barb_tutorial.ipynb
   - Reference API:
-    - Barb: barb.md 
-    - Likelihood: barb.likelihood.md
-    - MCMC: barb.mcmc.md
-    - Plotting: barb.plotting.md
-    - Read_Inputs: barb.read_inputs.md
+      - Barb: barb.md
+      - Likelihood: barb.likelihood.md
+      - MCMC: barb.mcmc.md
+      - Plotting: barb.plotting.md
+      - Read_Inputs: barb.read_inputs.md
 
 plugins:
   - search
