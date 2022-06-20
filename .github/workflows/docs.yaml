@@ -19,7 +19,7 @@ jobs:
 
       - name: Install it
         run: |
-          python setup.py install
+          python setup.py install --user
           
       - name: Create docs
         run: |
