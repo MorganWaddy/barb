@@ -65,7 +65,7 @@ def make_corner(allsamples, figname="rates_mc.png", save=False):
         allsamples,
         labels=labels,
         quantiles=[0.5],
-#        quantiles=[(1 - 0.99) / 2, 0.5, 1 - (1 - 0.99) / 2],
+        #        quantiles=[(1 - 0.99) / 2, 0.5, 1 - (1 - 0.99) / 2],
         show_titles=True,
         bins=50,
     )
