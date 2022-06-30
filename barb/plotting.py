@@ -58,15 +58,15 @@ def make_corner(allsamples, figname="rates_mc.png", save=False):
     """
     labels = [r"$\log \mathcal{R}$", r"$\alpha$"]
 
-#    quantile_val = 0.99
+    #    quantile_val = 0.99
 
     plt.figure(figsize=(15, 15))
     corner.corner(
         allsamples,
         labels=labels,
-#        quantiles=[(1 - 0.99) / 2, 0.5, 1 - (1 - 0.99) / 2],
+        #        quantiles=[(1 - 0.99) / 2, 0.5, 1 - (1 - 0.99) / 2],
         quantiles=[0.5],
-#        show_titles=True,
+        #        show_titles=True,
         bins=50,
     )
     if save == True:
