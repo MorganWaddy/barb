@@ -25,6 +25,8 @@ jobs:
       - name: Create docs
         run: |
           pydoc-markdown
+          mkdir -p docs/build/content/
+          cp -rp tutorial/* docs/build/content/
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:

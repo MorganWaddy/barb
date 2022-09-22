@@ -17,7 +17,7 @@ theme:
 
 nav:
   - Getting Started: index.md
-  - Tutorial: tutorial.barb_tutorial.ipynb
+  - Tutorial: barb_tutorial.ipynb
   - Reference API:
       - Barb: barb.md
       - Likelihood: barb.likelihood.md
