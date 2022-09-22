@@ -1,0 +1,1738 @@
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+ValueError: not enough values to unpack (expected 3, got 2)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+Traceback (most recent call last):
+Traceback (most recent call last):
+ValueError: not enough values to unpack (expected 3, got 2)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+ValueError: not enough values to unpack (expected 3, got 2)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+ValueError: not enough values to unpack (expected 3, got 2)
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+ValueError: not enough values to unpack (expected 3, got 2)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 624, in __call__
+    return self.f(x, *self.args, **self.kwargs)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/likelihood_specidx.py", line 117, in log_ll_specidx
+    alpha, beta, spectr = varrest
+ValueError: not enough values to unpack (expected 3, got 2)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/minish/mdw00016/FRB-rate/barb/barb_spectra/run_spectra_analysis.py", line 109, in <module>
+    old_tau = sampling_specidx(
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/barb-0.1-py3.10.egg/barb_spectra/mcmc_specidx.py", line 64, in sampling_specidx
+    for sample in sampler.sample(p0, iterations=max_n, progress=True):
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 344, in sample
+    state.log_prob, state.blobs = self.compute_log_prob(state.coords)
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/site-packages/emcee-3.1.2-py3.10.egg/emcee/ensemble.py", line 489, in compute_log_prob
+    results = list(map_func(self.log_prob_fn, p))
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/minish/mdw00016/.conda/envs/barbtools/lib/python3.10/multiprocessing/pool.py", line 771, in get
+    raise self._value
+ValueError: not enough values to unpack (expected 3, got 2)
+emcee: Exception while calling your likelihood function:
+  params: [1.1822843  2.52275522]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.176873   2.53719336]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.22165665 2.54727021]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.21584245 2.53149598]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.19539301 2.53347382]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.19925976 2.52460561]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.22068484 2.51069151]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.17806604 2.51555094]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.19862191 2.54477006]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.20344639 2.50952082]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.18207198 2.51411738]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.19026347 2.5236736 ]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.20682314 2.53595912]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.22280414 2.50541459]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.17663535 2.53301898]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.20171544 2.50774575]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.19604305 2.52245917]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.18004801 2.53963891]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.18291205 2.52354266]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.19412756 2.5141679 ]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.20634801 2.53484097]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.18977713 2.54692059]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.21600114 2.52027014]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.2121639  2.51938189]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.21246866 2.51898474]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. , 1440. , 1440. , 1440. , 1440. ,
+       1400. , 1400. , 1400. , 1400. , 2000. ,  800. , 1440. , 2000. ,
+       1400. , 1400. , 1400. , 1400. , 1400. , 1440. , 1440. , 1400. ]))
+  kwargs: {}
+  exception:
+emcee: Exception while calling your likelihood function:
+  params: [1.18235837 2.53361956]
+  args: (array([ 1.,  4.,  1.,  0.,  1., 11.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+        0.,  0.,  3.,  0.,  0.,  1.,  0.,  0.,  4.,  0.,  1.,  1.,  1.,
+       20.,  0.,  1.]), array([9.29792604e+00, 2.80000000e-01, 2.46000000e+01, 2.64500000e-01,
+       3.07500000e-01, 2.80000000e-01, 1.82500000e-01, 7.56000000e+00,
+       1.68000000e-01, 1.06800000e+00, 3.00000000e-01, 9.60000000e-01,
+       3.12000000e-01, 2.23500000e-01, 1.20000000e-01, 2.95000000e-01,
+       2.10000000e-02, 8.70000000e-02, 2.70000000e-01, 2.10000000e-02,
+       8.70000000e-02, 2.80000000e-01, 4.34000000e-01, 2.77500000e-01,
+       2.46000000e+01, 2.77500000e-01, 2.46000000e+01, 5.90000000e+01,
+       1.05000000e-01]), array([0.45      , 0.11666667, 0.45      , 0.11666667, 0.11666667,
+       0.11666667, 0.03333333, 0.4       , 0.075     , 0.075     ,
+       0.075     , 0.075     , 0.075     , 0.11666667, 0.5       ,
+       0.11666667, 0.02916667, 0.075     , 0.125     , 0.02916667,
+       0.075     , 0.11666667, 0.11666667, 0.11666667, 0.45      ,
+       0.11666667, 0.45      , 1.25      , 0.03333333]), array([36.,  1., 36., 13., 13., 13.,  7.,  1.,  1.,  1.,  1.,  1.,  1.,
+       13.,  1., 13.,  1.,  1.,  1.,  1.,  1.,  1., 13., 13., 36., 13.,
+       36., 30.,  7.]), array([3.00000000e+02, 2.72200000e+03, 1.28600000e+03, 5.32600000e+02,
+       9.17300000e+02, 2.78650000e+03, 4.59100000e+02, 1.20720000e+04,
+       2.19400000e+03, 6.15000000e+02, 5.56000000e+02, 2.10000000e+02,
+       1.81000000e+02, 1.55750000e+03, 1.66000000e+02, 7.40500000e+02,
+       2.00000000e+01, 6.00000000e+01, 4.00000000e+02, 1.31583333e+01,
+       6.01500000e+00, 6.59500000e+02, 9.26000000e+02, 8.55000000e+01,
+       9.63890000e+02, 6.84000000e+01, 1.70000000e+03, 1.35800000e+02,
+       1.15033000e+04]), array([ 2.20000000e+01,  7.00000000e-01,  3.00000000e-01,  4.30000000e-01,
+        5.00000000e-01,  2.42105263e+01, -1.00000000e+00,  3.00000000e-01,
+        1.30000000e+00,  4.00000000e-01,  5.00000000e-01,  5.00000000e-01,
+        8.70000000e-01,  4.20000000e-01,  6.90000000e-01,  1.67000000e+00,
+        1.80000000e-01,  2.20000000e+00,  2.70000000e+01, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+       -1.00000000e+00, -1.00000000e+00, -1.00000000e+00, -1.00000000e+00,
+        3.00000000e+01,  2.50000000e-01,  4.20000000e-01, -1.00000000e+00,
+       -1.00000000e+00,  6.00000000e-01, -1.00000000e+00, -1.00000000e+00,
+        1.20000000e+00,  2.35000000e+01,  1.50000000e-01,  6.00000000e-01,
+       -1.00000000e+00,  4.70000000e-01,  1.77000000e+02,  2.10000000e+00,
+        2.41666667e+01,  1.94000000e+01,  7.72727273e+00,  1.48571429e+01,
+        2.96000000e+01,  4.05000000e+01,  4.05555556e+01,  1.17647059e+02,
+        2.73913043e+01,  8.86666667e+01,  2.10526316e+01,  1.31250000e+02,
+        4.07407407e+01,  1.75862069e+01,  2.86956522e+01,  2.31707317e+01,
+        2.22222222e+01,  5.30386740e+01, -1.00000000e+00,  4.00000000e-01]), array([1297. , 1400. , 1382. , 1352. , 1372.5, 1300. , 1440. , 1400. ,
+       1365. , 1400. , 1420. , 1665. ,
