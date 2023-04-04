@@ -18,6 +18,7 @@ def read_in_specidx(jsons):
         tpb ([float]): time per beam
         flux ([float]): flux measurement of the FRB
         freq ([float]): center frequency of the observation
+        bw ([float]): bandwidth of the observation
     """
     j = len(jsons)
     k = j + 1
@@ -32,6 +33,7 @@ def read_in_specidx(jsons):
         tpb = []
         freq = []
         flux = []
+        bw = []
         logging.info("The number of user file(s) supplied is {0}".format(j) + "\n")
         logging.info("The supplied file(s) is/are {0}".format(filename) + "\n")
         for e in jsons:
@@ -50,10 +52,11 @@ def read_in_specidx(jsons):
                             #with open(e, "r") as fobj:
                                # info = json.load(fobj)
                     freq = np.append(freq, p["freq"])
+                    bw = np.append(freq, p["bandw"])
                     #else:
                     #freq = np.append(freq, 1)
                         #fobj.close()
     else:
             logging.info(
                 "No data was supplied, please supply data on the command line!")
-    return nFRBs, sensitivity, R, beams, tpb, flux, freq
+    return nFRBs, sensitivity, R, beams, tpb, flux, freq, bw

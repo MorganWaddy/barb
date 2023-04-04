@@ -6,10 +6,8 @@ import logging
 import sys
 import os
 
-from barb.read_inputs import read_in
 from barb_spectra.read_inputs_specidx import read_in_specidx
 from barb.plotting import make_corner
-from barb.mcmc import sampling, convert_params, read_samples
 from barb_spectra.mcmc_specidx import sampling_specidx, convert_params_specidx, read_samples_specidx
 
 os.environ["HDF5_USE_FILE_LOCKING"] = "FALSE"
@@ -95,9 +93,13 @@ Surveys on the original data set: Agarwal 2019, Masui 2015, Men 2019, Bhandari 2
         varrgroup = read_in(files)
     logging.info("Data Provided: {0}".format(varrgroup) + "\n")
 
-    ndim, nwalkers = 2, 1200
+    #changed ndim from 2 and nwalkers from 1200
+    ndim, nwalkers = 3, 12000
     # walkers are copies of a system evolving towards a minimum
-    ivar = np.array([np.log10(15), 2.5])
+    ivar = np.array([np.log10(15), 2.5, 0.])
+    logging.info("{0}".format(ivar) + "\n")
+    myrandvar = np.random.uniform(size=(nwalkers, ndim))
+    logging.info("{0}".format(myrandvar) + "\n")
     # ivar is an intermediate variable for sampling
     p0 = ivar + 0.05 * np.random.uniform(size=(nwalkers, ndim))
     # returns a uniform random distribution mimicking the distribution

@@ -1,6 +1,5 @@
 import numpy as np
 
-# delete this
 def area(R, gamma):
     """
     Calculate the beam shape
@@ -16,37 +15,58 @@ def area(R, gamma):
     beta = gamma + 1
     return ar
 
-# delete this
-def power_integral(sensitivity, beta):
+def beam_atten_flux(flux, sensitivity, beta):
     """
-    Calculates the integral of [sensitivity^(beta)]d(sensitivity)
+    Calculates the flux with beam attenuation
 
     Args:
         sensitivity (float): sensitivity at FWHM divided by 2 (measured in janskys)
         beta (float): Euclidean scaling (gamma + 1)
 
     Returns:
-        (sensitivity ** -(beta - 1)) / (beta - 1) (float)
+        fluxat (float): flux divided sensitivity at HWHM attenuated by the scaling factor,
+        accounting for the telescope's beam attenuation
     """
-    return (sensitivity ** -(beta - 1)) / (beta - 1)
+    fluxat = (flux / sensitivity) ** (1 - beta)
+    return fluxat
 
-def freq_term(freq, pow_term):
+def freq_term(freq, bw, spectr, gamma):
     """
     Defines the frequency term that is scaled by the spectral index
 
     Args:
         freq (float): central frequency (measured in MHz)
         beta (float): Euclidean scaling (gamma + 1)
+        bw (float): bandwidth (measured in MHz)
+    Returns:
+        freqle (float): the frequency term scaled by the spectral index
     """
-    return freq ** pow_term
+    freqle = (bw / freq) ** (1 - (spectr * (gamma)))
+    beta = gamma + 1
+    return freqle
 
+def ref_rate(time, alpha, beta, spectr):
+    """
+    Calculates the first set of terms coming from the integral over flux and frequency,
+    including the reference rate.
+    
+    Args:
+        time (float): the time per beam multiplied by the number of beams
+        alpha (float): product of reference rate and gamma
+        beta (float): Euclidean scaling (gamma + 1)
+        spectr (float): spectral index term
+
+    Returns:
+    """
+    ref = ((-time) * (alpha / (beta - 1))) / (1 - (spectr * (beta - 1)))
+    return ref
 
 def likelihood_list_specidx(vargroup, alpha, beta, spectr):
     """
     Analyzes all available data to return the likelihood that there will be an FRB
 
     Args:
-        vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, sensitivity, R, beams, tpb, flux, freq
+        vargroup ([np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float], np.ndarray[float]]): nFRBs, sensitivity, R, beams, tpb, flux, freq, bw
             nFRBs: number of FRBs detected
             sensitivity: sensitivity at FWHM divided by 2 (measured in janskys)
             R: telescope radius
@@ -54,6 +74,7 @@ def likelihood_list_specidx(vargroup, alpha, beta, spectr):
             tpb: time per beam
             flux: flux measurement of the FRB
             freq: central frequency (measured in MHz)
+            bw (float): bandwidth (measured in MHz)
         alpha (float): product of reference rate and gamma
         beta (float): Euclidean scaling (gamma +1)
         spectr (float): spectral index
@@ -61,41 +82,48 @@ def likelihood_list_specidx(vargroup, alpha, beta, spectr):
     Returns:
         likelihood_list (np.ndarray[float]): list of likelihoods that there will be an FRB
     """
-    nFRBs, sensitivity, R, beams, tpb, flux, freq = vargroup
-    powterm = 1 - (spectr * (beta - 1))
-    freqterm = freq_term(freq, powterm)
-    A = area(R, beta - 1)
-    I = power_integral(sensitivity, beta)
-    time = tpb * beams
-    arr = time * A * (alpha / ((beta - 1) ** 2)) * (1 / (1 - (spectr * (beta - 1))))
-    arr = np.array(arr)
+    nFRBs, sensitivity, R, beams, tpb, flux, freq, bw = vargroup
+    freqterm = freq_term(freq, bw, spectr, beta)
     flux = np.array(flux)
+    A = area(R, beta - 1)
+    atten_flux = beam_atten_flux(flux, sensitivity, beta)
+    time = tpb * beams
+    r_ref = ref_rate(time, alpha, beta, spectr)
+    r_ref = np.array(r_ref)
     ll = 0
-    if type(I) == float or np.shape(I) == ():
+
+    """
+    if type(atten_flux) == float or np.shape(atten_flux) == ():
         for idx, nburst in enumerate(nFRBs):
-            # idx is just a number that identifies a place in the array
             if flux[idx] == [-1]:
-                val = -arr[idx] * I * freqterm
+                val = r_ref[idx] * A[idx] * (sensitivity ** (1 - beta)) * freqterm[idx]
+
             else:
                 val = (
-                    -arr[idx] * I * freqterm
-                    + nburst * (np.sum(np.log(alpha / (beta - 1)) - (spectr * gamma * np.log(freq)) - (beta * np.log(flux))))
+                    r_ref[idx] * A[idx] * atten_flux[idx] * freqterm[idx]
+                    + nburst * (np.log((np.pi * R ** 2) / np.log(2))
+                                - ((spectr * (beta -1)) * (np.log(bw[idx]) - np.log(freq[idx]))))
+                    - ((beta - 1) * (np.sum(np.log(flux[idx]) - np.log(sensitivity[idx]))))
                 )
             ll += val
     else:
-        for idx, nburst in enumerate(nFRBs):
-            # idx is just a number that identifies a place in the array
-            if flux[idx] == [-1]:
-                val = -arr[idx] * I[idx] * freqterm
-            else:
-                val = (
-                    -taa[idx] * I[idx] * freqterm
-                    + nburst * (np.sum(np.log(alpha / (beta - 1)) - (spectr * gamma * np.log(freq)) - (beta * np.log(flux))))
-                )
-            ll += val
-    return ll
+    """
 
-def log_ll_specidx(varrest, nFRBs, sensitivity, R, beams, tpb, flux, freq):
+    for idx, nburst in enumerate(nFRBs):
+        if flux[idx] == [-1]:
+            val = r_ref[idx] * A[idx] * (sensitivity ** (1 - beta)) * freqterm[idx]
+            
+        else:
+            val = (
+                r_ref[idx] * A[idx] * atten_flux[idx] * freqterm[idx]
+                + nburst * (np.log((np.pi * R ** 2) / np.log(2))
+                            - ((spectr * (beta -1)) * (np.log(bw[idx]) - np.log(freq[idx]))))
+                - ((beta - 1) * (np.sum(np.log(flux[idx]) - np.log(sensitivity[idx]))))
+            )
+            ll += val
+        return ll
+
+def log_ll_specidx(varrest, nFRBs, sensitivity, R, beams, tpb, flux, freq, bw):
     """
     Calculates the log of the result from likelihood_list
 
@@ -116,9 +144,9 @@ def log_ll_specidx(varrest, nFRBs, sensitivity, R, beams, tpb, flux, freq):
     """
     alpha, beta, spectr = varrest
     alpha = 10**alpha
-    vargroup = nFRBs, sensitivity, R, beams, tpb, flux, freq
+    vargroup = nFRBs, sensitivity, R, beams, tpb, flux, freq, bw
     if beta < 1:
         return -np.inf
         # returns a positive infinity multiplied by -1
         # (np.inf is a floating point constant value in the numpy library)
-    return likelihood_list(vargroup, alpha=alpha, beta=beta, spectr=spectr)
+    return likelihood_list_specidx(vargroup, alpha=alpha, beta=beta, spectr=spectr)

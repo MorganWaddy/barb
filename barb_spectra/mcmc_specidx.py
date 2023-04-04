@@ -24,6 +24,7 @@ def sampling_specidx(
             tpb: time per beam
             flux: flux measurement of the FRB
             freq: central frequency (measured in MHz)
+            bw (float): bandwidth (measured in MHz)
         cpu_num (float): number of cpus
         nwalkers (float):walkers are copies of a system evolving towards a minimum
         ndim (float): number of dimensions to the analysis
@@ -37,19 +38,17 @@ def sampling_specidx(
     """
     backend = emcee.backends.HDFBackend(filename)
     backend.reset(nwalkers, ndim)
-    nFRBs, sensitivity, R, beams, tpb, flux, freq = vargroup
+    nFRBs, sensitivity, R, beams, tpb, flux, freq, bw = vargroup
     ncpu = cpu_num
     # pool paralelizes the execution of the functions over the cpus
     pool = Pool(ncpu)
-
-    logging.info(
-        "Value of likelihood at: np.log10(15), 2.5 is: {log_ll((np.log10(15), 2.5), nFRBs, sensitivity, R, beams, tpb, flux, freq)}"
-    )
 
     sampler = emcee.EnsembleSampler(
         nwalkers, ndim, log_ll_specidx, args=(vargroup), pool=pool, backend=backend
     )
     max_n = max_n
+
+    logging.info("\n" + "In the mcmc sampler function, the value of the likelihood at " + str(np.log10(15)) + ", 2.5 will be calculated with the nFRBs, sensitivity, R, beams, tpb, flux, and freq arrays" + "\n")
 
     # tracking how the average autocorrelation time estimate changes
     index = 0
@@ -59,9 +58,12 @@ def sampling_specidx(
     old_tau = np.inf
 
     # sample for up to max_n steps
-    # this function samples until it converges at a estimate of
+    # this function samples until it converges at an estimate of
     # rate for the events
     for sample in sampler.sample(p0, iterations=max_n, progress=True):
+        # adding this in to the log file to check progress
+        logging.info("current place in index: {0}".format(index))
+        
         # only check convergence every 100 steps
         if sampler.iteration % 100:
             continue
@@ -70,7 +72,7 @@ def sampling_specidx(
         tau = sampler.get_autocorr_time(tol=0)
         autocorr[index] = np.mean(tau)
         index += 1
-
+        
         # check convergence
         converged = np.all(tau * 100 < sampler.iteration)
         converged &= np.all(np.abs(old_tau - tau) / tau < 0.01)
@@ -80,7 +82,6 @@ def sampling_specidx(
     pool.close()
     return old_tau
 
-# delete this
 def read_samples_specidx(filename):
     """
     Analyzes output file to compute the samples from the MCMC sampler
@@ -107,7 +108,6 @@ def read_samples_specidx(filename):
     logging.info("samples: {0}".format(samples))
     return samples
 
-# delete this
 def convert_params_specidx(samples):
     """
     Converts MCMC samples for the corner plot
